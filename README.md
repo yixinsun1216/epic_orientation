@@ -1,1 +1,3 @@
-# epic_orientation
+# EPIC Orientation
+
+Repo for all orientation training materials
