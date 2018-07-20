@@ -1,0 +1,3 @@
+\beamer@sectionintoc {1}{Command Line}{2}{0}{1}
+\beamer@sectionintoc {2}{Scripts}{8}{0}{2}
+\beamer@sectionintoc {3}{Acropolis}{12}{0}{3}

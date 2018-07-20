@@ -1,0 +1,37 @@
+\begin{table}[htbp]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Endline share of children with reading test level above 3, instrumented for Number of HPS Payments}
+\begin{tabular*}{1\hsize}{@{\hskip\tabcolsep\extracolsep\fill}l*{5}{c}}
+\toprule
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         \\
+\midrule
+Number of HPS Payments&    0.012         &   0.0056         &   0.0051         &   0.0051         &   0.0054         \\
+                & (0.0074)         & (0.0053)         & (0.0054)         & (0.0054)         & (0.0054)         \\
+Baseline reading score above 3&                  &     0.27\sym{***}&     0.26\sym{***}&     0.26\sym{***}&     0.26\sym{***}\\
+                &                  &  (0.026)         &  (0.025)         &  (0.025)         &  (0.026)         \\
+Baseline literacy level&                  &     0.21\sym{***}&     0.21\sym{***}&     0.21\sym{***}&     0.21\sym{***}\\
+                &                  &  (0.014)         &  (0.014)         &  (0.014)         &  (0.014)         \\
+Baseline school attendance&                  &   -0.086\sym{**} &   -0.087\sym{**} &   -0.087\sym{**} &   -0.083\sym{**} \\
+                &                  &  (0.034)         &  (0.035)         &  (0.035)         &  (0.035)         \\
+Monthly income 100,000s&                  &                  &     0.52\sym{***}&     0.51\sym{***}&     0.54\sym{***}\\
+                &                  &                  &   (0.11)         &   (0.11)         &   (0.12)         \\
+Baseline any electricity&                  &                  &                  &   0.0083         &                  \\
+                &                  &                  &                  &  (0.028)         &                  \\
+Baseline gov. electricity&                  &                  &                  &                  & -0.00089         \\
+                &                  &                  &                  &                  &  (0.054)         \\
+Baseline HPS biomass&                  &                  &                  &                  &     0.32\sym{***}\\
+                &                  &                  &                  &                  &  (0.087)         \\
+Baseline HPS solar&                  &                  &                  &                  &   -0.054         \\
+                &                  &                  &                  &                  &   (0.11)         \\
+Baseline diesel generator&                  &                  &                  &                  &    0.031         \\
+                &                  &                  &                  &                  &  (0.035)         \\
+Baseline own/share solar&                  &                  &                  &                  &   -0.079\sym{*}  \\
+                &                  &                  &                  &                  &  (0.046)         \\
+\midrule
+cmean           &                  &                  &                  &                  &     0.65         \\
+\bottomrule
+\multicolumn{6}{l}{\footnotesize Marginal effects; Standard errors in parentheses}\\
+\multicolumn{6}{l}{\footnotesize  (d) for discrete change of dummy variable from 0 to 1}\\
+\multicolumn{6}{l}{\footnotesize \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular*}
+\end{table}

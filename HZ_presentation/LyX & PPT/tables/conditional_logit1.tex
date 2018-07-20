@@ -1,0 +1,108 @@
+\begin{table}[htbp]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Conditional Logit, Interactions}
+\scalebox{.7}{
+\begin{tabular}{l*{1}{c}}
+\toprule
+                    &\multicolumn{1}{c}{(1)}\\
+                    &\multicolumn{1}{c}{Source choice}\\
+\midrule
+Monthly price (Rs. 100s)&      -1.922\sym{***}\\
+                    &     (0.156)         \\
+\addlinespace
+Load (watts)        &     -0.0226\sym{***}\\
+                    &   (0.00156)         \\
+\addlinespace
+Hours/day available &       1.066\sym{***}\\
+                    &     (0.196)         \\
+\addlinespace
+Hours/day use       &      -1.202\sym{***}\\
+                    &     (0.127)         \\
+\addlinespace
+Price*Number of rooms&      0.0233         \\
+                    &    (0.0301)         \\
+\addlinespace
+Price*Pukka (=1)    &     -0.0304         \\
+                    &    (0.0893)         \\
+\addlinespace
+Price*Solid roof (=1)&      0.0624         \\
+                    &    (0.0861)         \\
+\addlinespace
+Price*Owns agricultural land&       0.259\sym{***}\\
+                    &    (0.0484)         \\
+\addlinespace
+Price*Number of adults&      0.0379         \\
+                    &    (0.0261)         \\
+\addlinespace
+Price*Monthly income (Rs. 100,000)&       0.350         \\
+                    &     (0.576)             \\
+\addlinespace
+Price*Literacy of hh head&     0.00114         \\
+                    &    (0.0195)         \\
+\addlinespace
+Load*Number of rooms&    0.000624\sym{***}\\
+                    &  (0.000207)         \\
+\addlinespace
+Load*Pukka (=1)     &     0.00254\sym{***}\\
+                    &  (0.000660)         \\
+\addlinespace
+Load*Solid roof (=1)&     0.00303\sym{***}\\
+                    &  (0.000710)         \\
+\addlinespace
+Load*Number of adults&    0.000880\sym{***}\\
+                    &  (0.000170)         \\
+\addlinespace
+Load*Monthly income (Rs. 100,000)&      0.0111\sym{***}\\
+                    &   (0.00384)         \\
+\addlinespace
+Load*Literacy of hh head&    0.000657\sym{***}\\
+                    &  (0.000128)         \\
+\addlinespace
+Hours available*Number adults&     0.00850\sym{***}\\
+                    &   (0.00150)         \\
+\addlinespace
+Hours available*Literacy&    -0.00104         \\
+                    &  (0.000901)         \\
+\addlinespace
+Hours use*Number adults&     -0.0243\sym{***}\\
+                    &   (0.00748)         \\
+\midrule
+
+HPS Constant            &      -17.71\sym{***}\\
+                    &     (4.298)         \\
+\midrule
+
+Diesel Constant            &       3.008\sym{***}\\
+                    &     (0.431)         \\
+\midrule
+
+Formal grid, low load Constant            &       1.856\sym{*}  \\
+                    &     (0.951)         \\
+\midrule
+
+Formal grid, highload Constant            &       2.713\sym{***}\\
+                    &     (0.840)         \\
+\midrule
+
+Informal grid, low load Constant            &       4.041\sym{***}\\
+                    &     (0.930)         \\
+\midrule
+
+Informal grid, highload Constant            &       5.368\sym{***}\\
+                    &     (0.803)         \\
+\midrule
+
+Own solar, low load Constant            &      -19.23\sym{***}\\
+                    &     (4.268)         \\
+\midrule
+
+Own solar, high load Constant            &      -19.20\sym{***}\\
+                    &     (4.232)         \\
+\midrule
+Observations        &       51698         \\
+\bottomrule
+\multicolumn{2}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{2}{l}{\footnotesize \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular}
+}
+\end{table}

@@ -1,0 +1,225 @@
+%%% Credit for base template: Tom Leinster, University of Edinburgh
+% https://www.maths.ed.ac.uk/~tl/beamer/
+\documentclass{beamer}
+
+% Beamer packages
+\usepackage{beamerseminar}
+\usetheme{Darmstadt}
+
+% Other packages
+\usepackage{amsmath} % Math
+\usepackage{pgffor} % Loops
+\usepackage{subfig} % Subfigures
+
+%%% Options
+% Gets rid of the bottom-right navigation symbols
+\setbeamertemplate{navigation symbols}{}
+
+% Frame numbers
+\setbeamertemplate{footline}[frame number]
+
+% Non-shown text to appear gray
+\setbeamercovered{transparent}
+
+%%% Title page formatting
+\title{Intro to Beamer - Simple Template \& Commands}
+\author{EPIC RA Orientation}
+\date{August 21, 2018}
+
+% The most important line in the document
+\begin{document}
+
+% Title slide
+\begin{frame}
+\titlepage
+\centering
+\tiny{Note: Template borrowed from Tom Leinster at the University of Edinburgh, with my further edits}
+\end{frame}
+
+%2
+\section{Basics}
+\begin{frame}
+\frametitle{Intro to Beamer}
+\begin{itemize}
+	\item<1> Beamer is the most popular LaTeX document class for presentations
+	\vspace{0.2cm}
+	\item<2> Slides in Beamer are organized as ``frames''
+	\vspace{0.2cm}
+	\item<3> As with itemize in regular LaTeX, use ``\textbackslash begin'' and ``\textbackslash end'', without the quotes of course, to encapsulate any object.
+	\vspace{0.2cm}
+	\begin{itemize}
+		\item<3> e.g. To create a new slide, write ``\textbackslash begin\{frame\}'', then the contents of the frame, then ``\textbackslash end\{frame\}''. 
+		\vspace{0.2cm}
+		\item<3> We will call any instance ``\textbackslash begin\{\}'' and ``\textbackslash end\{\}'' an environment.
+		\vspace{0.2cm}
+		\item<3> Whenever you write the ``\textbackslash begin\{\}'', don't forget ``\textbackslash end\{\}''!
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+%3
+\begin{frame}
+\frametitle{Use ``\textbackslash frametitle\{\}'' to create the slide title}
+Any free text that appears within the frame environment, and outside of the frame title, appears here.
+\end{frame}
+
+%4
+\begin{frame}
+\frametitle{Pause}
+Write ``\textbackslash pause'' to insert stop animation into the slides.
+\pause
+\\[1em]
+This text darkens after ``\textbackslash pause''
+\end{frame}
+
+%5
+\begin{frame}
+\frametitle{Itemize}
+\begin{itemize}
+	\item Itemize and enumerate all work the same way in Beamer as they do in TeX. Just remember to place the ``\textbackslash begin\{itemize\}'' and ``\textbackslash end\{itemize\}'' within the ``\textbackslash begin\{frame\}'' and ``\textbackslash end\{frame\}''.
+\end{itemize}
+\end{frame}
+
+%6
+\begin{frame}
+\frametitle{Equations}
+Same for equations. Just use ``\textbackslash begin\{align\}'' and ``\textbackslash end\{align\}'' as you otherwise would in TeX.
+\begin{align*}	
+	y &= \alpha + \beta x + \epsilon	.
+\end{align*}	
+\end{frame}
+
+%7
+\begin{frame}
+\frametitle{Tables}
+Tabular environment:
+\begin{center}
+  \begin{tabular}{ c | c  c  c }
+    $\ast$ & e & a & b \\ \hline
+    e & e & a & b \\ 
+    a & a & b & e \\ 
+    b & b & e & a
+  \end{tabular}
+\end{center} 
+Array environment:
+\[ 
+\begin{array}{c | c c c}
+    \ast & e & a & b \\ \hline
+    e & e & a & b \\ 
+    a & a & b & e \\ 
+    b & b & e & a
+ \end{array} 
+\] 
+The distinction is the latter's use of a math environment. Also, the array allows brackets or parentheses to surround the table.
+\end{frame}
+
+%8
+\begin{frame}
+\frametitle{Reading in a table from another file}
+Use ``\textbackslash input\{path-to-file\}''. 
+\\[1em]
+I recommend this over hard-coded tables in the presentation, to allow for modularity when iterating through analyses. Set up your Stata/R/Python code to write to a TeX file with pre-specified formatting.
+\begin{table}
+	\centering
+	\scriptsize{
+	\input{china_table/log_COD_on_fees.tex}
+	}
+\end{table}
+\end{frame}
+
+
+%9
+\begin{frame}
+\frametitle{Figures \& Graphics}
+Simply ``\textbackslash includegraphics\{path-to-file\}''. 
+\\[1em]
+We recommend using ``\textbackslash centering'' within a figure framework for better formatting.
+\vspace{1cm}
+\begin{figure}
+	\includegraphics[width=0.8\linewidth]{epic_logo}
+\end{figure}
+\end{frame}
+
+%10
+\begin{frame}
+\frametitle{Figures \& Graphics}
+Side-by-side figures:
+\begin{figure}[h]%
+    \centering
+    \subfloat{{\includegraphics[scale=0.33]{epic_logo} }}%
+    \quad
+    \subfloat{{\includegraphics[scale=0.33]{epic_logo} }}%
+    %\caption{2 Figures side by side}%
+    %\label{fig:example}%
+\end{figure}
+\end{frame}
+
+%11
+\begin{frame}
+\frametitle{Figures \& Graphics}
+Stacked side-by-side figures with a figure caption:
+\begin{figure}[h]%
+    \centering
+    \subfloat{{\includegraphics[scale=0.33]{epic_logo} }}%
+    \quad
+    \subfloat{{\includegraphics[scale=0.33]{epic_logo} }}%
+    \\[1em]
+    \subfloat{{\includegraphics[scale=0.33]{epic_logo} }}%
+    \quad
+    \subfloat{{\includegraphics[scale=0.33]{epic_logo} }}%
+    \vspace{0.2cm}
+    \caption{Here are four EPIC logos}
+\end{figure}
+\end{frame}
+
+%12
+\section{More Complicated Features}
+\begin{frame}
+\frametitle{Uncovering an Equation in a Derivation}
+Use ``\textbackslash uncover\textless1-\textgreater'' within the align environment, replacing the `1' with any natural number to order the uncovering.
+\begin{align*}
+	\uncover<1->{\zeta &= P\left(q_{\frac{\alpha}{2}}SE\left(\bar{x}\right) < \bar{x} - \mu < q_{1 - \frac{\alpha}{2}}SE\left(\bar{x}\right)\right)} ,
+	\\[1em]
+	\uncover<2->{ &= P\left(-q_{\frac{\alpha}{2}}SE\left(\bar{x}\right) > \mu - \bar{x} > -q_{1 - \frac{\alpha}{2}}SE\left(\bar{x}\right)\right),}
+	\\[1em]
+	\uncover<2->{&= P\left(\bar{x} -q_{\frac{\alpha}{2}}SE\left(\bar{x}\right) > \mu  > \bar{x} -q_{1 - \frac{\alpha}{2}}SE\left(\bar{x}\right)\right).}	
+\end{align*}
+\uncover<3>{If you wish, add [1em] to the \textbackslash\textbackslash \, line breaks for more space between the lines.}
+\end{frame}
+
+%13 - 16
+\foreach \ot in {mayor, ps}	 {%% First loop over mayor vs. party secretary, i.e. official type
+    \foreach \ct in {crpt, noncrpt} {% % Then whether the official was investigated for corruption or not
+        % Defines a string to correspond with our "corrupt" indicator
+        \ifnum\pdfstrcmp{\ct}{crpt}=0 % String comparison, i.e. "if equal". \ifnum needs a boolean as input.
+            \newcommand{\ctstr}{corrupt}
+        \else
+            \newcommand{\ctstr}{non-corrupt}
+        \fi % Don't forget this!
+        
+        \ifnum\pdfstrcmp{\ot}{mayor}=0 
+            \newcommand{\otstr}{party secretaries}
+        \else
+            \newcommand{\otstr}{mayors}
+        \fi % Don't forget this!
+        
+        \begin{frame}
+	\frametitle{Figures in a loop}
+            % FIGURE is here
+            \begin{figure}[H]
+            \caption{\textbf{Censored distribution of land sales' price for \ctstr\hspace{0.05em} \otstr)}}
+            \centering
+            \includegraphics[width=0.65\linewidth]{china_figures/histograms/unitprice_small_\ct_\ot_mf}
+            \label{unitprice_small_\ct_\ot_mf} % Label the figure for future referencing
+            \end{figure}
+         \end{frame}
+    }%
+}%
+
+%17
+\begin{frame}
+\frametitle{Any questions?}
+\end{frame}
+
+% The other most important line in the document
+\end{document}

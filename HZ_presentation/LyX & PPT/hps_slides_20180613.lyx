@@ -1,0 +1,7638 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass beamer
+\begin_preamble
+\mode<presentation>
+{
+  %\usefonttheme{serif}
+  %\usefonttheme{structurebold}
+  \useoutertheme[subsection=false]{miniframes}
+  \useinnertheme{circles}
+  %\setbeamercolor{structure}{fg=black, bg=white}
+  \setbeamertemplate{navigation symbols}{}
+}
+\usetheme{CambridgeUS}
+\usecolortheme{beaver}
+\useoutertheme{infolines}
+\usepackage[english]{babel}
+\usepackage{calc}\usepackage{adjustbox}
+\usepackage{textcomp}
+\usepackage{subfigure}
+\usepackage{gensymb}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{colortbl}\newcommand{\be}{\begin{eqnarray*}}
+\newcommand{\ee}{\end{eqnarray*}}
+\setbeamersize{text margin left=5mm, text margin right=4mm} 
+\DeclareMathOperator*{\argmax}{arg\,max}
+\usepackage[10pt]{moresize}
+
+\usepackage{array}
+\usepackage{ragged2e}
+\newcolumntype{P}[1]{>{\RaggedRight\hspace{0pt}}p{#1}}
+
+\AtBeginSection[] { 
+  \begin{frame}[plain] 
+    \frametitle{Outline} 
+    \tableofcontents[currentsection] 
+  \end{frame} 
+  \addtocounter{framenumber}{-1} 
+} 
+
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Demand for Electricity in a Poor Economy}
+\author{\textbf{Michael Greenstone} (Chicago) with Robin Burgess (LSE), Nicholas Ryan (Yale) and Anant Sudarshan (EPIC--India)}
+\end_preamble
+\options compress,t
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding iso8859-1
+\fontencoding default
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+beamerdefaultoverlayspecification{<+->}
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+setbeamertemplate{headline}{} 
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+beamertemplatenavigationsymbolsempty 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Demand for Electricity in a Poor Economy 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Demand for Electricity
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author
+\begin_inset Flex Bold
+status open
+
+\begin_layout Plain Layout
+Michael Greenstone (Chicago)
+\end_layout
+
+\end_inset
+
+ with Robin Burgess (LSE), Nicholas Ryan (Yale), and Anant Sudarshan (EPIC–India
+)
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Michael Greenstone
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+If you wish to uncover everything in a step-wise fashion, uncomment the
+ following command:
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+plain
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Electricity is considered critical for growth and human well-being 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -0.6cm
+\end_inset
+
+ 
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/energy_critical.pdf
+	width 3in
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+plain
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+allowframebreaks
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Over a billion people globally, nearly all in South Asia and Sub-Saharan
+ Africa, do not have electricity in their homes 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -0.6cm
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Population without electricity (millions), 2016 (IEA)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/map_nonelectrified_population.pdf
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+plain
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Electrification is a huge priority for policy
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\tabcolsep}{6pt}
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ssmall}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset include
+LatexCommand input
+filename "tables/rural_electrification_hz.tex"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ssmall}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+plain
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Solar has gotten a lot cheaper
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Price history of silicon PV cells (Bloomberg)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/pv_prices.pdf
+	width 4in
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+plain
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+And, places with low electrification rates also have lots of solar availability
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset VSpace -0.2cm
+\end_inset
+
+ 
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/insolation.pdf
+	width 4.5in
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 3
+status collapsed
+
+\begin_layout Plain Layout
+plain
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Cheap solar makes distributed power easier
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Grid electrification
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+caption{Kamuthi Plant, 648 MW}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+includegraphics[width=6cm]{figures/kamuthi.jpg} 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename ../../Data/Analysis/output/figures/feeder_picture.pdf
+	width 4.5cm
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "45text%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Distributed electrification
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/HPSpanel.pdf
+	width 4.5cm
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+plain
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Optimism over electrification via solar, particularly from Western donors
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Quotation
+\begin_inset Quotes eld
+\end_inset
+
+I have seen for myself how people's lives can be transformed with the installati
+on of a simple solar panel system .
+ .
+ .
+ It has the power to help millions of Africans 
+\series bold
+lift themselves
+\series default
+ out of poverty and transform the prospects of an entire continent.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Grant Shapps, former UK Minister of State for International Development
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+plain
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+At the same time, others make the case for grid electrification 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Quotation
+\begin_inset Quotes eld
+\end_inset
+
+Affordable and reliable grid electricity allows factory owners to increase
+ output and hire more workers...Societies that are able to meet their energy
+ needs become wealthier, more resilient, and better able to navigate social
+ and environmental hazards like climate change and natural disasters.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Executive Summary, Our High Energy Planet, The Breakthrough Institute 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+plain
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+This paper conducts an experiment to measure willingness to pay for electricity
+ by randomizing the price of solar micro-grids
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+We ran a randomized experiment in partnership with a micro-grids solar company,
+ Husk Power Systems (HPS).
+ 
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Sample of 100 villages in Bihar, India
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+3 randomly assigned prices
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+34 control villages where HPS system was not offered
+\end_layout
+
+\begin_layout Itemize
+33 treatment 1 villages where system was offered at market price of 200
+ INR (later cut to 160 INR)
+\end_layout
+
+\begin_layout Itemize
+33 treatment 2 villages where system was offered at below market price of
+ 100 INR
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Surveyed households before and after, and collected administrative payment
+ data
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+plain
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+But we found there is a surprisingly competitive retail power sector in
+ Bihar, India
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -0.3cm
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/HPSpanel.pdf
+	width 1.7in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/DG.pdf
+	width 1.7in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/PSS.pdf
+	width 1.7in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/ownsolar_cropped.pdf
+	width 1.7in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+plain
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Source attributes
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset VSpace -0.6cm
+\end_inset
+
+
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "tables/elec_sources_means_baseline1.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+plain
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Dynamic period of electricity supply in sample villages where suppliers
+ are entering and exiting
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -0.6cm
+\end_inset
+
+ 
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/timeseries_source_avail.pdf
+	width 4in
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+plain
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Rich data with information on households and all energy sources that characteriz
+es the retail electricity market
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Household survey.
+
+\series default
+ Baseline (Nov, 2013) and endline 1 (Apr, 2016) and endline 2 (May, 2017)
+ surveys of 3,000 households in 100 rural villages of Bihar.
+ 
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Administrative 1.
+
+\series default
+ Payments data from solar provider.
+ 
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Administrative 2.
+
+\series default
+ Supply and payment records from state utility.
+ 
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Supplier survey.
+
+\series default
+ Survey all diesel generators on hours of supply.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+plain
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+This paper addresses 3 sets of questions
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+1.
+ Experimental estimates of the demand for solar microgrids and their benefits.
+ 
+\end_layout
+
+\begin_layout Itemize
+Trace out demand curve.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+At 2013-2016 unsubsidized prices, near zero demand.
+\end_layout
+
+\begin_layout Itemize
+Demand is very elastic and at prices about 1/2 of true cost, HPS microgrids
+ capture 7% of the market.
+ 
+\end_layout
+
+\begin_layout Itemize
+Traditional analysis
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Users experience increase in light bulb ownership, hours of electricity
+ use and mobile phone ownership
+\end_layout
+
+\begin_layout Itemize
+No meaningful effect on health, children's test scores, or income
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+plain
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+This paper addresses 3 sets of questions
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+2.
+ Estimate nested logit with IV model of electricity source demand with 4
+ sources to account for heterogeneity in sources and substitution opportunities.
+
+\series default
+ 
+\end_layout
+
+\begin_layout Itemize
+Households are price sensitive– increasing the monthly price by 10 INR ($0.16)
+ reduces...
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+HPS market share by 0.6 percentage points
+\end_layout
+
+\begin_layout Itemize
+Own solar market share by 0.8 pp
+\end_layout
+
+\begin_layout Itemize
+Diesel market share by 0.35 pp 
+\end_layout
+
+\begin_layout Itemize
+Grid market share by 1.3 pp
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Night time electricity is valued highly: annual WTP for an additional hour
+ of peak period electricity is 473 INR, compared to annual household income
+ of roughly 90,000 INR.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+plain
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+This paper addresses 3 sets of questions
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+3.
+ Counterfactuals: Improvements in the Grid are Valued Highly
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Extending the grid everywhere
+\series default
+ decreases unelectrified (from 42 pp to 23 pp), increases WTP by 89 INR
+ per household annually, and greatly increases utility losses
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Introduction of solar to market.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Solar's market share is highly dependent on grid availability
+\end_layout
+
+\begin_layout Itemize
+WTP for introducing solar into the market declines from about 400 INR per
+ year per household when the grid isn't available to 90 INR when it is available
+ everywhere
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Optimistic solar innovation scenario.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Decreases the share of households that are unelectrified by only 2 percentage
+ points
+\end_layout
+
+\begin_layout Itemize
+Low WTP for solar innovation, approximately equal to 63 INR per household
+ annually
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+plain
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+This paper addresses 3 sets of questions
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+3.
+ Counterfactuals (cont.): Improvements in the Grid are Valued Highly
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Distribution reforms.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+A 1 hour increase in night time supply of electricity decreases unelectrified
+ by 6 pp, increases annual WTP by 415 INR, and greatly increases distribution
+ company losses.
+\end_layout
+
+\begin_layout Itemize
+Ending theft increases unelectrified from 42 pp to 47 pp, reduces annual
+ WTP by 536 INR, and greatly reduces losses
+\end_layout
+
+\begin_layout Itemize
+Budget neutral increase to full supply of night time hours to 5 and reduction
+ in theft decreases unelectrified by 6 pp and increases annual WTP by 381
+ INR.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+plain
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Previous literature
+\end_layout
+
+\begin_layout Enumerate
+Effects of grid electrification on labor supply, productivity, and socioeconomic
+ welfare outcomes (Rud 2012; Dinkelman 2011; Lipscomb, Mobarak and Barham
+ 2013; Barron and Torero 2017)
+\end_layout
+
+\begin_layout Enumerate
+Demand for off-grid solar power (Aklin et al.
+ 2017; Grimm et al.
+ 2016)
+\end_layout
+
+\begin_layout Enumerate
+Willingness to pay for grid connections (Lee, Miguel, and Wolfram 2018)
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+plain
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+This paper's contribution
+\end_layout
+
+\begin_layout Enumerate
+First welfare analysis of markets for rural electrification that recover
+ demand primitives and account for substitution opportunities
+\end_layout
+
+\begin_layout Enumerate
+Medium-term subsidies (1-2 years) on solar technology that mimic real-world
+ price variation and track households and their decisions for 3.5 years
+\end_layout
+
+\begin_layout Enumerate
+Can conduct counterfactual welfare analysis of alternative policies that
+ lay beyond the experiment
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Context: Energy environment in Bihar
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Sample villages located in two districts of Bihar
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset VSpace -0.6cm
+\end_inset
+
+ 
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/india_map.pdf
+	width 4in
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Biharis consume a small amount of electricity
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset VSpace -0.6cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{table}[htbp]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{footnotesize}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+caption{Electrification context, 2014 data} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{l*{1}{cccc}} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+toprule 
+\end_layout
+
+\begin_layout Plain Layout
+
+Location & US & India & 
+\backslash
+shortstack{Sub-Saharan 
+\backslash
+
+\backslash
+Africa} & Bihar 
+\backslash
+
+\backslash
+ 
+\backslash
+midrule 
+\end_layout
+
+\begin_layout Plain Layout
+
+GDP per capita, PPP (USD 2017) &   54,599  &  5,678 & 3,660 & 1,505 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+kWh per capita & 12,985 & 765 & 481 & 122 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+Electricity access (
+\backslash
+%) &   100     & 79      &  37 & 25 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+kWh per capita / US level & 1 & 0.059 & 0.037 & 0.009 
+\backslash
+
+\backslash
+ 
+\backslash
+bottomrule 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+multicolumn{5}{l}{
+\backslash
+footnotesize Source: World Bank and EPW}
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{footnotesize}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{table}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Electricity Sources
+\end_layout
+
+\begin_layout Subsubsection
+Husk Solar Microgrids
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Outline
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+1.
+ Energy Environment in Bihar
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+A.
+\end_layout
+
+\end_inset
+
+ Electricity Sources
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+i.
+\end_layout
+
+\end_inset
+
+ Husk Solar Microgrids
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+ii.
+\end_layout
+
+\end_inset
+
+ State-Owned Grid Distribution
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+iii.
+\end_layout
+
+\end_inset
+
+ Diesel Electricity
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+iv.
+\end_layout
+
+\end_inset
+
+ Own Solar
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+B.
+\end_layout
+
+\end_inset
+
+ Summarizing Electricity Source Attributes and Availability
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+C.
+\end_layout
+
+\end_inset
+
+ Experimental Design
+\end_layout
+
+\begin_layout Standard
+2.
+ Demand for Solar Microgrids
+\end_layout
+
+\begin_layout Standard
+3.
+ Demand Model for Alternative Energy Sources
+\end_layout
+
+\begin_layout Standard
+4.
+ Counterfactual Analysis
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Experiment partner is Husk Power Systems, in the vanguard of solar electrificati
+on in India
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -0.4cm
+\end_inset
+
+
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "40col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/hps_biomass_plant.jpg
+	width 4cm
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/husk_logo.jpeg
+	width 1.9cm
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "50text%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{small}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Conceived in 2008, winning business plan competitions at UVA, U.
+ of Texas, Cisco-Draper Fisher Jurvetson (DFJ) Global Business Plan Competitions.
+\end_layout
+
+\begin_layout Itemize
+Funded by US Overseas Private Investment Corporation (OPIC), Shell Foundation,
+ International Finance Corporation (World Bank), Acumen Fund, LGT Philanthropy,
+ Bamboo Finance 
+\end_layout
+
+\begin_layout Itemize
+Moved to solar subscription model to reach villages that could not support
+ biomass plant, and to adapt to rising fuel costs.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{small}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+HPS solar product: A 240 watt micro-grid typically shared among 6 households
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset VSpace -0.5cm
+\end_inset
+
+
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "b"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "40col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+Provides 25-40 watts of power, 5-7 hours of supply per day 
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Each household gets a meter with keypad, two LED bulbs, socket to charge
+ mobile phone 
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Payment is 200 INR (later reduced to 160 INR) monthly and customers recharge
+ their connection by buying a code 
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "b"
+hor_pos "c"
+has_inner_box 1
+inner_pos "b"
+use_parbox 0
+use_makebox 0
+width "50text%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+HPS Panel
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/HPSpanel.pdf
+	width 2in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+India alight with similar product offerings
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset space \hspace{}
+\length -0.75cm
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\renewcommand{\tabcolsep}{3pt}
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{footnotesize}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset include
+LatexCommand input
+filename "tables/solar_providers_lyx.tex"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{footnotesize}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+State-Owned Grid Distribution
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Outline
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+1.
+ Energy Environment in Bihar
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+A.
+\end_layout
+
+\end_inset
+
+ Electricity Sources
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+i.
+\end_layout
+
+\end_inset
+
+ Husk Solar Microgrids
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+ii.
+\end_layout
+
+\end_inset
+
+ State-Owned Grid Distribution
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+iii.
+\end_layout
+
+\end_inset
+
+ Diesel Electricity
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+iv.
+\end_layout
+
+\end_inset
+
+ Own Solar
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+B.
+\end_layout
+
+\end_inset
+
+ Summarizing Electricity Source Attributes and Availability
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+C.
+\end_layout
+
+\end_inset
+
+ Experimental Design
+\end_layout
+
+\begin_layout Standard
+2.
+ Demand for Solar Microgrids
+\end_layout
+
+\begin_layout Standard
+3.
+ Demand Model for Alternative Energy Sources
+\end_layout
+
+\begin_layout Standard
+4.
+ Counterfactual Analysis
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Grid electricity
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Load is practically unlimited with respect to appliances that these households
+ own
+\end_layout
+
+\begin_layout Itemize
+Supply is unpredictable due to extensive load shedding, or supply rationing
+ but averages 13 hours per day in connected villages
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Revised to reflect summary table above 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Our best estimate is that these consumers use about 60-100 kWh per month
+\end_layout
+
+\begin_layout Itemize
+Formal tariffs set by distribution companies
+\end_layout
+
+\begin_layout Itemize
+Very poor bill collection in practice
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Flex Bold
+status open
+
+\begin_layout Plain Layout
+Distribution companies lose about 43 INR for every 100 INR of costs
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/PSS.pdf
+	width 2.5in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Grid price schedule
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -0.5cm
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\tabcolsep}{6pt}
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{footnotesize}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset include
+LatexCommand input
+filename "tables/NBPDCL_tariffs.tex"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{footnotesize}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Location of Villages
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace -0.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/villages_blank.pdf
+	width 3.9in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Electrification in Dec.
+ 2013
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace -0.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/village_electrification_baseline.pdf
+	width 3.9in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Electrification in May 2016
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace -0.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/village_electrification_endline1.pdf
+	width 3.9in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Electrification in June 2017
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace -0.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/village_electrification_endline2.pdf
+	width 3.9in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Variation in grid supply available to sample villages, March - May 2017
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace -0.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/hist_samplevill_supply.pdf
+	width 3.8in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Variation in grid supply, peak (5pm - 10pm) hours and off peak (else) hours
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/hist_samplevill_peaksupply.pdf
+	width 2.3in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/hist_samplevill_offsupply.pdf
+	width 2.3in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Payments and supply on the grid
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Quotation
+
+\shape italic
+\begin_inset Quotes eld
+\end_inset
+
+Whenever I feel like paying the bill.
+\begin_inset Quotes erd
+\end_inset
+
+
+\shape default
+ 
+\end_layout
+
+\begin_layout Standard
+- Bihar villager in response to survey question 
+\begin_inset Quotes eld
+\end_inset
+
+How often do you pay your bill?
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Payments and supply on the grid
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Quotation
+
+\shape italic
+\begin_inset Quotes eld
+\end_inset
+
+Whenever I feel like paying the bill.
+\begin_inset Quotes erd
+\end_inset
+
+
+\shape default
+ 
+\end_layout
+
+\begin_layout Standard
+- Bihar villager in response to survey question 
+\begin_inset Quotes eld
+\end_inset
+
+How often do you pay your bill?
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/hours_revenuerate.pdf
+	width 3in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Is it possible to divide grid customers?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Grid users are defined as formal if they could provide a consumer ID that
+ can be matched with the administrative consumer database
+\begin_inset VSpace -0.5cm
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\tabcolsep}{6pt}
+\end_inset
+
+ 
+\begin_inset CommandInset include
+LatexCommand input
+filename "tables/grid_informality_ttest_resized.tex"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Diesel Electricity
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Outline
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+1.
+ Energy Environment in Bihar
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+A.
+\end_layout
+
+\end_inset
+
+ Electricity Sources
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+i.
+\end_layout
+
+\end_inset
+
+ Husk Solar Microgrids
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+ii.
+\end_layout
+
+\end_inset
+
+ State-Owned Grid Distribution
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+iii.
+\end_layout
+
+\end_inset
+
+ Diesel Electricity
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+iv.
+\end_layout
+
+\end_inset
+
+ Own Solar
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+B.
+\end_layout
+
+\end_inset
+
+ Summarizing Electricity Source Attributes and Availability
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+C.
+\end_layout
+
+\end_inset
+
+ Experimental Design
+\end_layout
+
+\begin_layout Standard
+2.
+ Demand for Solar Microgrids
+\end_layout
+
+\begin_layout Standard
+3.
+ Demand Model for Alternative Energy Sources
+\end_layout
+
+\begin_layout Standard
+4.
+ Counterfactual Analysis
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Diesel electricity
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Village members own and run diesel generators, sell electricity within village
+\end_layout
+
+\begin_layout Itemize
+Most operators offer at least one standard plan, of 100 INR / month for
+ 100 watts
+\end_layout
+
+\begin_layout Itemize
+Turned on for predictable hours during peak demand, averaging about 3.5 hours
+ per day (all during night time hours)
+\end_layout
+
+\begin_layout Itemize
+Need a sufficient number of customers to cover fixed costs, so the availability
+ of diesel is highly dependent on the number of local customers
+\begin_inset VSpace -0.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/DG.pdf
+	width 1.8in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Own Solar Electricity
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Outline
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+1.
+ Energy Environment in Bihar
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+A.
+\end_layout
+
+\end_inset
+
+ Electricity Sources
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+i.
+\end_layout
+
+\end_inset
+
+ Husk Solar Microgrids
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+ii.
+\end_layout
+
+\end_inset
+
+ State-Owned Grid Distribution
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+iii.
+\end_layout
+
+\end_inset
+
+ Diesel Electricity
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+iv.
+\end_layout
+
+\end_inset
+
+ Own Solar
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+B.
+\end_layout
+
+\end_inset
+
+ Summarizing Electricity Source Attributes and Availability
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+C.
+\end_layout
+
+\end_inset
+
+ Experimental Design
+\end_layout
+
+\begin_layout Standard
+2.
+ Demand for Solar Microgrids
+\end_layout
+
+\begin_layout Standard
+3.
+ Demand Model for Alternative Energy Sources
+\end_layout
+
+\begin_layout Standard
+4.
+ Counterfactual Analysis
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Own solar electricity
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Off-grid solar option, as opposed to micro grid HPS
+\end_layout
+
+\begin_layout Itemize
+Most panels are small and service lightbulbs and mobile phone chargers
+\end_layout
+
+\begin_layout Itemize
+Provide similar hours of supply to HPS micro grid
+\end_layout
+
+\begin_layout Itemize
+We amortize own solar one-time costs to monthly payments assuming 7 year
+ panel life and 20% interest rate
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/ownsolar_cropped.pdf
+	width 2in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Summarizing Electricity Source Attributes and Availability
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Outline
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+1.
+ Energy Environment in Bihar
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+A.
+\end_layout
+
+\end_inset
+
+ Electricity Sources
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+B.
+\end_layout
+
+\end_inset
+
+ Summarizing Electricity Source Attributes and Availability
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+C.
+\end_layout
+
+\end_inset
+
+ Experimental Design
+\end_layout
+
+\begin_layout Standard
+2.
+ Demand for Solar Microgrids
+\end_layout
+
+\begin_layout Standard
+3.
+ Demand Model for Alternative Energy Sources
+\end_layout
+
+\begin_layout Standard
+4.
+ Counterfactual Analysis
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Source attributes
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -0.5cm
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\tabcolsep}{6pt}
+\end_inset
+
+ 
+\begin_inset CommandInset include
+LatexCommand input
+filename "tables/elec_sources_means_allwaves1.tex"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+What does load mean practically?
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -0.5cm
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\tabcolsep}{6pt}
+\end_inset
+
+ 
+\begin_inset CommandInset include
+LatexCommand input
+filename "tables/source_theoretical_capacity.tex"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Appliance use by source
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset VSpace -0.3cm
+\end_inset
+
+
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/bar_ownership_combined.pdf
+	width 4.2in
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+The outside option: What do unelectrified homes do for lighting and energy?
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset VSpace -0.3cm
+\end_inset
+
+
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/bar_nonelec_lightsources.pdf
+	width 4.2in
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Unelectrified households own mobile phones
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset VSpace -0.3cm
+\end_inset
+
+
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/no_elec_end.pdf
+	width 4.2in
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Substantial variation in sources over time: At baseline, diesel is the primary
+ electricity source
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset VSpace -0.65cm
+\end_inset
+
+
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/bar_grid_solar_diesel_basea.pdf
+	width 4.75in
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+2.5 Years Later: Big Changes in Market Shares Due to Government Policy of
+ Grid Expansion, Declining Solar Prices, and the Exit of Diesel Generators
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/bar_grid_solar_diesela.pdf
+	width 4.25in
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Continued grid and solar expansion in 2017
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/bar_takeup_3surveys.pdf
+	width 4.75in
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Outline
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+1.
+ Energy Environment in Bihar
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+A.
+\end_layout
+
+\end_inset
+
+ Electricity Sources
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+B.
+\end_layout
+
+\end_inset
+
+ Summarizing Electricity Source Attributes and Availability
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+C.
+\end_layout
+
+\end_inset
+
+ Experimental Design
+\end_layout
+
+\begin_layout Standard
+2.
+ Demand for Solar Microgrids
+\end_layout
+
+\begin_layout Standard
+3.
+ Demand Model for Alternative Energy Sources
+\end_layout
+
+\begin_layout Standard
+4.
+ Counterfactual Analysis
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Sample of marginally non-electrified villages
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Village selection
+\series default
+.
+ HPS staff and project field staff visited 130 villages and found 102 with
+ population of 48,979 that met four criteria.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Within 15 km of existing HPS villages 
+\end_layout
+
+\begin_layout Enumerate
+Less than 50 households with solar and less than 50 households with biomass
+ electricity 
+\end_layout
+
+\begin_layout Enumerate
+Less than 25% of households with grid electricity 
+\end_layout
+
+\begin_layout Enumerate
+At least one tola (neighborhood) in village without grid connections 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Household selection
+\series default
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+HPS and survey team jointly conducted customer identification survey to
+ create sampling frame of households that expressed interest in adopting
+ solar 
+\end_layout
+
+\begin_layout Itemize
+In practice, this was not restrictive, as no deposit was required 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+93% of 18,000+ enumerated households stated interest at 100 INR
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+About 30 households were surveyed in each village for a sample of approximately
+ 3,000 households 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Village-level experimental design to estimate solar demand curve
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Cluster-based randomized design with three treatment arms 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Control
+\series default
+.
+ HPS does not offer solar in village.
+ 
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Normal price
+\series default
+.
+ HPS offers solar at 200 INR (USD 3.33) and 160 INR (USD 2.67) per month,
+ the prevailing pre-experiment price.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Subsidized price
+\series default
+.
+ HPS offers solar at 100 INR (USD 1.67) per month with subsidies paid by
+ researchers for experiment.
+ 
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+All households could sign up in treated villages, regardless of prior expression
+ of interest or survey status.
+ Sales began in January 2014.
+ In practice, a HPS installation required about 4 interested households
+ that could be connected to the same panel.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/villages.pdf
+	width 4.5in
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Baseline covariate balance
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -0.5cm
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\tabcolsep}{3pt}
+\end_inset
+
+ 
+\begin_inset CommandInset include
+LatexCommand input
+filename "tables/covariate_balance_panelAB_simple.tex"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Baseline covariate balance
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -0.5cm
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\tabcolsep}{3pt}
+\end_inset
+
+ 
+\begin_inset CommandInset include
+LatexCommand input
+filename "tables/covariate_balance_panelC_simple.tex"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Demand for solar microgrids
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Demand curve for HPS solar (administrative data)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset VSpace -0.5cm
+\end_inset
+
+
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/newdemand_share_customers_no115.pdf
+	width 4.5in
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+But, solar microgrid take-up declines over time
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -0.5cm
+\end_inset
+
+
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/individual_connection_timeseries.pdf
+	width 4.3in
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Demand curve for HPS solar
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -0.5cm
+\end_inset
+
+
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/newdemand_share_customers_once_end.pdf
+	width 4.5in
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+HPS consumer surplus at current price and price that could prevail with
+ substantial innovation
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -0.5cm
+\end_inset
+
+
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/newdemand_consumer_surplus.pdf
+	width 4.5in
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+ITT Reduced-form effects of Offering and Subsidizing HPS Microgrids
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -0.5cm
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\tabcolsep}{1pt}
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{small}
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "tables/reg_bulb_mobile.tex"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{small}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+ITT Reduced-form effects of Offering and Subsidizing HPS Microgrids
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -0.5cm
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\tabcolsep}{1pt}
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{small}
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "tables/ivreg_sum.tex"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{small}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Summary of reduced-form results
+\end_layout
+
+\begin_layout Enumerate
+Demand for solar 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Near zero at 2013 to 2016 unsubsidized prices 
+\end_layout
+
+\begin_layout Itemize
+Demand is very elastic and solar microgrids capture 
+\begin_inset Formula $\approx$
+\end_inset
+
+ 7% of the market at prices about 1/2 of true cost 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sources of demand 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Users experience increase in light bulb ownership, hours of electricity
+ use and mobile phone ownership 
+\end_layout
+
+\begin_layout Itemize
+No statistically meaningful effect on health, children's test scores, or
+ income 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Appears related to availability and attributes of other products.
+ We now turn to a model of demand for electricity sources to investigate.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Demand model for alternative energy sources
+\end_layout
+
+\begin_layout FrameTitle
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+What are the determinants of demand for electricity sources?
+\end_layout
+
+\begin_layout Standard
+We estimate a demand system, using the experiment, to answer a rich set
+ of possible counter-factual questions.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Today: Nested logit with IV
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Data
+\series default
+.
+ Households choose one of 
+\begin_inset Formula $\{Grid,\:Diesel,\:Own\:Solar,\:HPS\:Solar\:Microgrid,\:None\}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Prices and availability at village-level.
+ 
+\end_layout
+
+\begin_layout Itemize
+Extraordinarily detailed household covariates.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Model
+\series default
+.
+ Nested logit model with three nests of 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\{Grid\}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\{Diesel,\:Own\:Solar,\:HPS\:Solar\:Microgrid\}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\{None\}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Variation
+\series default
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Use experimental price variation for HPS solar 
+\end_layout
+
+\begin_layout Itemize
+Treat availability and price of other sources as exogenous
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Nested logit model
+\end_layout
+
+\begin_layout Itemize
+Indirect utility for household 
+\begin_inset Formula $i$
+\end_inset
+
+ in village 
+\begin_inset Formula $v$
+\end_inset
+
+ and time 
+\begin_inset Formula $t$
+\end_inset
+
+ from electricity sources 
+\begin_inset Formula $j$
+\end_inset
+
+ is given by 
+\begin_inset Formula 
+\begin{eqnarray*}
+U_{vtij} & = & \delta_{vtj}+z_{tir}\beta_{rj}+\sum_{g}d_{jg}\zeta_{gi}+(1-\sigma_{g})\epsilon_{vtij}\\
+\delta_{vtj} & \equiv & \sum_{k}x_{vtjk}\bar{\beta}_{k}+\xi_{vtj}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x_{vtjk}$
+\end_inset
+
+ are source characteristics.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $z_{tir}$
+\end_inset
+
+ are household characteristics (income, number of adults, ownership of agricultu
+ral land).
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\zeta_{gi}+(1-\sigma_{g})\epsilon_{vtij}$
+\end_inset
+
+ 
+\begin_inset Formula $\sim$
+\end_inset
+
+ EV-I, 
+\begin_inset Formula $\epsilon_{vtij}$
+\end_inset
+
+ 
+\begin_inset Formula $\sim$
+\end_inset
+
+ EV-I (nested logit model)
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\xi_{vtj}$
+\end_inset
+
+ is the mean unobserved utility of a source.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Estimate nested logit accounting for endogeneity
+\end_layout
+
+\begin_layout Standard
+Use micro data (BLP, 2004) and account for endogeneity (Berry, 1994)
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Non linear search.
+ 
+\series default
+Search over 
+\begin_inset Formula $(\beta,\sigma)$
+\end_inset
+
+ to match the characteristics of the households that buy each product with
+ GMM estimator
+\begin_inset Formula 
+\[
+G_{tirj}(\beta,\sigma)=z_{tir}\left(\boldsymbol{1}\{i_{j}=j\}-Pr\left(i_{j}=j\:|\:\mathbf{z_{\mathrm{ti}},}\mathbf{x_{\mathrm{vt}},\mathrm{\beta,}\delta\mathrm{(}\beta\sigma\mathrm{)}}\right)\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Contraction mapping.
+ 
+\series default
+Use Berry (1994) contraction mapping to recover 
+\begin_inset Formula $\delta_{vtj}(\hat{\beta},\hat{\sigma})$
+\end_inset
+
+ for each village x wave x source.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Linear instrumental variables.
+ 
+\series default
+Use 2SLS with specification:
+\begin_inset Formula 
+\begin{align*}
+\delta_{vtj}(\hat{\beta,\hat{\sigma}}) & =\sum_{k}x_{vtjk}\bar{\beta}_{k}+\bar{\xi}_{tj}+\xi_{vtj}\\
+x_{vtj,price}= & \mathbf{1\left\{ \mathrm{\mathit{NormalPrice}}\right\} \times\mathbf{1\mathrm{\left\{ \mathit{Endline1}\right\} \alpha_{1}}}+}\\
+ & \mathbf{1}\left\{ SubsidisedPrice\right\} \times\mathbf{1\mathrm{\left\{ \mathit{Endline1}\right\} \alpha_{2}+}}\\
+ & \mathbf{\mathrm{\mathbf{\mathrm{\sum_{\mathit{k\neq price}}\mathit{x_{vtjk}\gamma_{k}+\rho_{tj}+\varepsilon_{vtj}}}}}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Experiment estimates structural parameters
+\end_layout
+
+\begin_layout Standard
+Several candidate instruments for demand
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Supply / cost shifter.
+ 
+\series default
+Prices in other markets (Hausman instruments).
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Mark-up shifter.
+ 
+\series default
+Characteristics of other products in the same market (BLP instruments).
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Mark-up shifter.
+ 
+\series default
+Randomized experiment assigning price of HPS solar.
+\end_layout
+
+\begin_layout Standard
+We opt to use (3)
+\end_layout
+
+\begin_layout Itemize
+Perhaps the first experimental estimate of discrete choice (Kremer, Leino,
+ Miguel and Zwane (2011) identify mixed logit model with travel cost, not
+ experiment)
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Household characteristics 
+\begin_inset Formula $z_{vti}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -0.7cm
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\tabcolsep}{4pt}
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{small}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset include
+LatexCommand input
+filename "tables/hh_attributes_sum_preimpute_base.tex"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{small}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Electricity source characteristics 
+\begin_inset Formula $x_{vtj}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -0.7cm
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\tabcolsep}{8pt}
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{small}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset include
+LatexCommand input
+filename "tables/elec_sources_means_allwaves1.tex"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{small}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Variation in source characteristics
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -0.5cm
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\tabcolsep}{3pt}
+\end_inset
+
+ 
+\begin_inset CommandInset include
+LatexCommand input
+filename "tables/source_charac_variation.tex"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Estimation results: non linear part
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -0.7cm
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\tabcolsep}{4pt}
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{small}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset include
+LatexCommand input
+filename "tables/nlogitIV_estimates.tex"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{small}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Estimation results: linear part
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -0.4cm
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\tabcolsep}{4pt}
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{small}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset include
+LatexCommand input
+filename "tables/nlogitIV_linear_betabar.tex"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{small}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Estimation results: linear part
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -0.4cm
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\tabcolsep}{4pt}
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{small}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset include
+LatexCommand input
+filename "tables/nlogitIV_linear_firststage_abrev.tex"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{small}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Estimate results: mean grid unobserved utilities
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -0.5cm
+\end_inset
+
+
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/grid_xi_dist.pdf
+	width 4in
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Estimate results: mean diesel unobserved utilities
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -0.5cm
+\end_inset
+
+
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/diesel_xi_dist.pdf
+	width 4in
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Estimate results: mean own solar unobserved utilities
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -0.5cm
+\end_inset
+
+
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/ownsolar_xi_dist.pdf
+	width 4in
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Estimate results: mean HPS unobserved utilities
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -0.5cm
+\end_inset
+
+
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/hps_xi_dist.pdf
+	width 4in
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Key Findings
+\end_layout
+
+\begin_layout Enumerate
+Households are price sensitive – increasing the monthly price by 10 INR
+ ($0.16) reduces...
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+HPS market share by 0.6 percentage points
+\end_layout
+
+\begin_layout Itemize
+Own solar market share by 0.8 pp
+\end_layout
+
+\begin_layout Itemize
+Diesel market share by 0.4 pp 
+\end_layout
+
+\begin_layout Itemize
+Grid market share by 1.3 pp
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Key Findings
+\end_layout
+
+\begin_layout Enumerate
+Households are price sensitive – increasing the monthly price by 10 INR
+ ($0.16) reduces...
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+HPS market share by 0.6 percentage points
+\end_layout
+
+\begin_layout Itemize
+Own solar market share by 0.8 pp
+\end_layout
+
+\begin_layout Itemize
+Diesel market share by 0.4 pp 
+\end_layout
+
+\begin_layout Itemize
+Grid market share by 1.3 pp
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Households highly value night time hours
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Annual MWTP for an additional hour of night time electricity is 473 INR.
+\end_layout
+
+\begin_layout Itemize
+Annual household income is roughly 90,000 INR
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Key Findings
+\end_layout
+
+\begin_layout Enumerate
+Households are price sensitive – increasing the monthly price by 10 INR
+ ($0.16) reduces...
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+HPS market share by 0.6 percentage points
+\end_layout
+
+\begin_layout Itemize
+Own solar market share by 0.8 pp
+\end_layout
+
+\begin_layout Itemize
+Diesel market share by 0.4 pp 
+\end_layout
+
+\begin_layout Itemize
+Grid market share by 1.3 pp
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Households highly value night time hours
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Annual MWTP for an additional hour of night time electricity is 473 INR.
+\end_layout
+
+\begin_layout Itemize
+Annual household income is roughly 90,000 INR
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Wealth proxies increase demand for electricity, particularly the grid
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Key Findings
+\end_layout
+
+\begin_layout Enumerate
+Households are price sensitive – increasing the monthly price by 10 INR
+ ($0.16) reduces...
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+HPS market share by 0.6 percentage points
+\end_layout
+
+\begin_layout Itemize
+Own solar market share by 0.8 pp
+\end_layout
+
+\begin_layout Itemize
+Diesel market share by 0.4 pp 
+\end_layout
+
+\begin_layout Itemize
+Grid market share by 1.3 pp
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Households highly value night time hours
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Annual MWTP for an additional hour of night time electricity is 473 INR.
+\end_layout
+
+\begin_layout Itemize
+Annual household income is roughly 90,000 INR
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Wealth proxies increase demand for electricity, particularly the grid
+\end_layout
+
+\begin_layout Enumerate
+Estimation details
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Load is in the constant, suggesting that it is part of the grid's appeal
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Counterfactual analysis
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Estimating the Change in Consumer Surplus or WTP 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset VSpace -0.4cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+1.
+\end_layout
+
+\end_inset
+
+For a given consumer 
+\begin_inset Formula $i$
+\end_inset
+
+, calculate the observable component of indirect utility 
+\begin_inset Formula $\widehat{V}_{vtij}$
+\end_inset
+
+ for every choice 
+\begin_inset Formula $j$
+\end_inset
+
+ using 
+\begin_inset Formula $\hat{\delta_{j}},\hat{\beta}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{\sigma}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+2.
+\end_layout
+
+\end_inset
+
+Calculate the inclusive value of each nest 
+\begin_inset Formula $k$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+IV_{ik}=\ln\sum_{j\in B_{k}}\exp(\widehat{V}_{vtij}/(1-\sigma_{g})).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+3.
+\end_layout
+
+\end_inset
+
+Given the inclusive value of each nest, calculate the value of the choice
+ over nests as 
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathbb{E}[CS_{i}|J]=ln\left(\sum_{g}exp((1-\sigma_{g})IV_{ig})\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+5.
+\end_layout
+
+\end_inset
+
+Willingness-to-pay for the expanded choice set is 
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{i}-\left(\mathbb{E}[CS_{i}|J^{\prime}]-\mathbb{E}[CS_{i}|J]\right)/\beta_{price}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Calculating annual losses to grid utility per household
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Annual losses to the utility per capita are given by 
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\left(12\times NumGridCustomers\times\left(60\frac{kWh}{month}\times3.88\frac{INR}{kWh}-x_{vt,grid,price}\right)\right)}{N}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+60
+\begin_inset Formula $\frac{kWh}{month}$
+\end_inset
+
+mean consumption among Bihar households in billing data
+\end_layout
+
+\begin_layout Itemize
+3.88 
+\begin_inset Formula $\frac{INR}{kWh}$
+\end_inset
+
+ power purchase cost (NBPDCL Tariff Order FY 14-15)
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Counterfactuals on grid and solar policy
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+1.
+ Complete expansion of the grid
+\series default
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color lightgray
+2.
+ Introduction of solar to market
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color lightgray
+3.
+ Optimistic solar innovation scenario 
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color lightgray
+4.
+ Distribution reforms
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace -0.2cm
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename figures/Modis_Goal.pdf
+	width 2.6in
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+WTP for current policy objective
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -0.7cm
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\tabcolsep}{4pt}
+\end_inset
+
+ 
+\begin_inset CommandInset include
+LatexCommand input
+filename "tables/discom_policy_counter1_nlogitIV.tex"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+Note: Assumes Endline 1 covariates and sources available as in April 2016.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Counterfactuals on grid and solar policy
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\color lightgray
+1.
+ Complete expansion of the grid
+\color inherit
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+2.
+ Introduction of solar to market 
+\series default
+\color lightgray
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color lightgray
+3.
+ Optimistic solar innovation scenario 
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color lightgray
+4.
+ Distribution reforms
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Off-grid solar market shares fall as grid expands
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset VSpace -0.1cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/bar_solarwtp1.pdf
+	width 3.7in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+Note: Assumes Endline 2 (May 2017) covariates.
+ Share of villages electrified given for each counterfactual.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Off-grid solar market shares fall as grid expands
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset VSpace -0.1cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/bar_solarwtp2.pdf
+	width 3.7in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+Note: Assumes Endline 2 (May 2017) covariates.
+ Share of villages electrified given for each counterfactual.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Off-grid solar market shares fall as grid expands
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset VSpace -0.1cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/bar_solarwtp3.pdf
+	width 3.7in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+Note: Assumes Endline 2 (May 2017) covariates.
+ Share of villages electrified given for each counterfactual.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Off-grid solar market shares fall as grid expands
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset VSpace -0.1cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/bar_solarwtp.pdf
+	width 3.7in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+Note: Assumes Endline 2 (May 2017) covariates.
+ Share of villages electrified given for each counterfactual.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+WTP for solar depends on presence of grid
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset VSpace -0.1cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/bar_solarwtp_perhh.pdf
+	width 3.7in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+Note: Assumes Endline 2 (May 2017) covariates.
+ Share of villages electrified given for each counterfactual.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Counterfactuals on grid and solar policy
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\color lightgray
+1.
+ Complete expansion of the grid
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color lightgray
+2.
+ Introduction of solar to market 
+\color inherit
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+3.
+ Optimistic solar innovation scenario
+\end_layout
+
+\begin_layout Itemize
+Assume PV prices fall by 55% in accordance with NREL PV module experience
+ curve 2022 projection.
+ 
+\end_layout
+
+\begin_layout Itemize
+Assume battery prices fall by 75% in accordance with DOE 2022 goal.
+ 
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color lightgray
+4.
+ Distribution reforms
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Projected capital costs in 2022 30% cheaper than subsidy treatment (INR
+ 75 vs INR 115)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset VSpace -0.1cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/HPS_capital_costs_INR.pdf
+	width 3.8in
+
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Solar demand limited, even at low prices
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset VSpace -0.1cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/line_counter_HPS_3panel.pdf
+	width 3.6in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+Note: Own solar prices varied proportionately to HPS price and we assume
+ the grid is at endline 1 availability (53%).
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Solar demand and addition to consumer surplus is limited, even at low prices
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -0.7cm
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\tabcolsep}{4pt}
+\end_inset
+
+ 
+\begin_inset CommandInset include
+LatexCommand input
+filename "tables/solar_innovation_counter_nlogitIV.tex"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size tiny
+Note: Assumes Endline 1 covariates and sources available as in April 2016.
+ Assumes battery and panel costs decline according to NREL and DOE 2022
+ projections and that own solar prices are comprised of similar share battery
+ and panel costs.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Counterfactuals on grid and solar policy
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\color lightgray
+1.
+ Complete expansion of the grid
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color lightgray
+2.
+ Introduction of solar to market 
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color lightgray
+3.
+ Optimistic solar innovation scenario
+\color darkgray
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+4.
+ Distribution reforms
+\end_layout
+
+\begin_layout Itemize
+Additional nighttime supply hours
+\end_layout
+
+\begin_layout Itemize
+Recover full tariffs (disallow theft)
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Distribution company potential policy reforms
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -0.7cm
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\tabcolsep}{4pt}
+\end_inset
+
+ 
+\begin_inset CommandInset include
+LatexCommand input
+filename "tables/discom_policy_counter_nlogitIV.tex"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+Note: Assumes Endline 1 covariates and sources available as in April 2016.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset VSpace -0.2cm
+\end_inset
+
+
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/bihar_real_electricity.pdf
+	width 3in
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Counterfactuals on grid and solar policy
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -0.7cm
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\tabcolsep}{4pt}
+\end_inset
+
+ 
+\begin_inset CommandInset include
+LatexCommand input
+filename "tables/counterfactuals_solar_grid_all_nlogitIV.tex"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+Note: Assumes Endline 1 covariates and sources available as in April 2016.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+This paper addresses 3 sets of questions
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+1.
+ Experimental estimates of the demand for solar microgrids and their benefits.
+ 
+\end_layout
+
+\begin_layout Itemize
+Trace out demand curve.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+At 2013-2016 unsubsidized prices, near zero demand.
+\end_layout
+
+\begin_layout Itemize
+Demand is very elastic and at prices about 1/2 of true cost, HPS microgrids
+ capture 7% of the market.
+ 
+\end_layout
+
+\begin_layout Itemize
+Traditional analysis
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Users experience increase in light bulb ownership, hours of electricity
+ use and mobile phone ownership
+\end_layout
+
+\begin_layout Itemize
+No meaningful effect on health, children's test scores, or income
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+This paper addresses 3 sets of questions
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+2.
+ Estimate nested logit model of electricity source demand with 4 sources
+ to account for heterogeneity in sources and substitution opportunities.
+
+\series default
+ 
+\end_layout
+
+\begin_layout Itemize
+Households are price sensitive– increasing the monthly price by by 10 INR
+ ($0.16) reduces...
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+HPS market share by 0.6 percentage points
+\end_layout
+
+\begin_layout Itemize
+Own solar market share by 0.8 pp
+\end_layout
+
+\begin_layout Itemize
+Diesel market share by 0.4 pp 
+\end_layout
+
+\begin_layout Itemize
+Grid market share by 1.3 pp
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Night time electricity is valued highly: annual WTP for an additional hour
+ of peak period electricity is 473 INR, compared to annual household income
+ of roughly 90,000 INR.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+plain
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+This paper addresses 3 sets of questions
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+3.
+ Counterfactuals: Improvements in the Grid are Valued Highly
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Extending the grid everywhere
+\series default
+ decreases unelectrified (from 42 pp to 23 pp), increases WTP by 89 INR
+ per household annually, and greatly increases utility losses
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Introduction of solar to market.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Solar's market share is highly dependent on grid availability
+\end_layout
+
+\begin_layout Itemize
+WTP for introducing solar into the market declies from about 400 INR per
+ year per household when the grid isn't available to 90 INR when it is available
+ everywhere
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Optimistic solar innovation scenario.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Decreases the share of households that are unelectrified by only 2 percentage
+ points
+\end_layout
+
+\begin_layout Itemize
+Low WTP for solar innovation, approximately equal to 63 INR per household
+ annually
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+plain
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+This paper addresses 3 sets of questions
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+3.
+ Counterfactuals (cont.): Improvements in the Grid are Valued Highly
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Distribution reforms.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+A 1 hour increase in night time supply of electricity decreases unelectrified
+ by 6 pp, increases annual WTP by 415 INR, and greatly increases distribution
+ company losses.
+\end_layout
+
+\begin_layout Itemize
+Ending theft increases unelectrified from 42 pp to 47 pp, reduces annual
+ WTP by 536 INR, and greatly reduces losses
+\end_layout
+
+\begin_layout Itemize
+Budget neutral increase to full supply of night time hours to 5 and reduction
+ in theft decreases unelectrified by 6 pp and increases annual WTP by 381
+ INR.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Lots of to-dos
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Richer model
+\series default
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Additional household covariates, consider mixed logit.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Conduct full welfare analysis, accounting for distribution company losses.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+......
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+plain
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Appendix
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+plain
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Measure intra-household socio-economic benefits with health and educational
+ outcomes
+\end_layout
+
+\begin_layout Enumerate
+Self-reported health (cardio-respiratory) 
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Directly administered reading and math tests (Pratham ASER) 
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Surveyed income 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+plain
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Health estimates: null effect
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -0.5cm
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\tabcolsep}{22pt}
+\end_inset
+
+ 
+\begin_inset CommandInset include
+LatexCommand input
+filename "tables/reg_respiratory1.tex"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+plain
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Solar and learning
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -0.5cm
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+caption{}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/reading_solar.pdf
+	width 4.5in
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+plain
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Reading test instrument from Pratham: Alphabet, Words, Paragraph, Story
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -0.5cm
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+caption{}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/Lit_test.pdf
+	width 4.5in
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+plain
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Learning estimates: larger null effect
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -0.5cm
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\renewcommand{\tabcolsep}{4pt}
+\end_inset
+
+ 
+\begin_inset CommandInset include
+LatexCommand input
+filename "tables/ivreg_reading1.tex"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+plain
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Income estimate: null effect
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -0.5cm
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\renewcommand{\tabcolsep}{4pt}
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+begin{small}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "tables/ivreg_income1.tex"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+end{small}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

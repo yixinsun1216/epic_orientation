@@ -1,0 +1,37 @@
+\begin{table}[htbp]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Endline total household number of weekly charges}
+\begin{tabular*}{1\hsize}{@{\hskip\tabcolsep\extracolsep\fill}l*{6}{c}}
+\toprule
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         \\
+\midrule
+Subsidy treatment village (=1)&     0.44\sym{***}&     0.44\sym{***}&     0.43\sym{***}&     0.42\sym{***}&     0.35\sym{**} &     0.37\sym{**} \\
+                &   (0.16)         &   (0.14)         &   (0.14)         &   (0.15)         &   (0.14)         &   (0.15)         \\
+No subsidy treatment village (=1)&     0.44\sym{***}&     0.35\sym{**} &     0.37\sym{**} &     0.36\sym{**} &     0.37\sym{**} &     0.33\sym{**} \\
+                &   (0.16)         &   (0.15)         &   (0.15)         &   (0.15)         &   (0.15)         &   (0.15)         \\
+weekly household charges&                  &     0.20\sym{***}&     0.19\sym{***}&     0.17\sym{***}&     0.17\sym{***}&     0.17\sym{***}\\
+                &                  &  (0.026)         &  (0.028)         &  (0.027)         &  (0.026)         &  (0.027)         \\
+Monthly income 100,000s&                  &                  &     2.15\sym{***}&     2.06\sym{***}&     2.01\sym{***}&     2.05\sym{***}\\
+                &                  &                  &   (0.77)         &   (0.77)         &   (0.76)         &   (0.77)         \\
+Baseline any electricity&                  &                  &                  &     0.41\sym{***}&                  &     0.40\sym{***}\\
+                &                  &                  &                  &   (0.13)         &                  &   (0.13)         \\
+Baseline gov. electricity&                  &                  &                  &                  &     1.23\sym{***}&                  \\
+                &                  &                  &                  &                  &   (0.32)         &                  \\
+Baseline HPS biomass&                  &                  &                  &                  &    -0.16         &                  \\
+                &                  &                  &                  &                  &   (0.78)         &                  \\
+Baseline HPS solar&                  &                  &                  &                  &     1.09\sym{*}  &                  \\
+                &                  &                  &                  &                  &   (0.56)         &                  \\
+Baseline diesel generator&                  &                  &                  &                  &    0.032         &                  \\
+                &                  &                  &                  &                  &   (0.17)         &                  \\
+Baseline own/share solar&                  &                  &                  &                  &     0.54\sym{*}  &                  \\
+                &                  &                  &                  &                  &   (0.30)         &                  \\
+Baseline village gov. elec&                  &                  &                  &                  &                  &     0.29         \\
+                &                  &                  &                  &                  &                  &   (0.18)         \\
+\midrule
+cmean           &                  &                  &                  &                  &                  &     3.16         \\
+\bottomrule
+\multicolumn{7}{l}{\footnotesize Marginal effects; Standard errors in parentheses}\\
+\multicolumn{7}{l}{\footnotesize  (d) for discrete change of dummy variable from 0 to 1}\\
+\multicolumn{7}{l}{\footnotesize \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular*}
+\end{table}

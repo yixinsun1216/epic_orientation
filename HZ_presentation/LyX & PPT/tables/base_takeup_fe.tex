@@ -1,0 +1,36 @@
+\begin{table}[htbp]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Energy source takeup on household characteristics, baseline, with village fixed effects \label{tab: LABEL}}
+\begin{tabular*}{1.0\hsize}{@{\hskip\tabcolsep\extracolsep\fill}l*{5}{c}}
+\toprule
+                                &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}\\
+                                &\multicolumn{1}{c}{Grid}&\multicolumn{1}{c}{HPS}&\multicolumn{1}{c}{Own Solar}&\multicolumn{1}{c}{Diesel}&\multicolumn{1}{c}{No Elec}\\
+\midrule
+Number of rooms                 &     0.00657\sym{*}  &    0.000574         &     0.00814\sym{**} &      0.0128\sym{**} &     -0.0280\sym{***}\\
+                                &   (0.00368)         &   (0.00140)         &   (0.00391)         &   (0.00572)         &   (0.00676)         \\
+\addlinespace
+House type (pukka = 1)          &   -0.000501         &     0.00265         &      0.0418\sym{***}&     -0.0119         &     -0.0320         \\
+                                &    (0.0122)         &   (0.00491)         &    (0.0126)         &    (0.0169)         &    (0.0217)         \\
+\addlinespace
+Owns agricultural land          &     0.00827         &     0.00276         &     -0.0158\sym{*}  &    0.000874         &     0.00385         \\
+                                &   (0.00929)         &   (0.00318)         &   (0.00924)         &    (0.0150)         &    (0.0183)         \\
+\addlinespace
+Solid Roof (=1)                 &      0.0236\sym{**} &    -0.00258         &      0.0120         &      0.0240         &     -0.0570\sym{***}\\
+                                &   (0.00999)         &   (0.00355)         &   (0.00993)         &    (0.0151)         &    (0.0191)         \\
+\addlinespace
+Number of adults                &     0.00486\sym{*}  &     0.00106         &     0.00505         &      0.0121\sym{***}&     -0.0230\sym{***}\\
+                                &   (0.00294)         &   (0.00115)         &   (0.00340)         &   (0.00396)         &   (0.00527)         \\
+\addlinespace
+Monthly income (Rs. 100000s)    &      0.0114         &     -0.0162         &       0.206\sym{**} &      0.0422         &      -0.244\sym{*}  \\
+                                &    (0.0617)         &    (0.0172)         &    (0.0970)         &    (0.0937)         &     (0.133)         \\
+\addlinespace
+Literacy of household head (1-8)&     0.00844\sym{***}&     0.00180\sym{**} &    -0.00402\sym{**} &     0.00971\sym{***}&     -0.0159\sym{***}\\
+                                &   (0.00220)         &  (0.000918)         &   (0.00198)         &   (0.00318)         &   (0.00389)         \\
+\midrule
+Observations                    &      3036.0         &      3036.0         &      3036.0         &      3036.0         &      3036.0         \\
+\bottomrule
+\multicolumn{6}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{6}{l}{\footnotesize }\\
+\multicolumn{6}{l}{\footnotesize \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular*}
+\end{table}

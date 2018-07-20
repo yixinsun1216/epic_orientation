@@ -1,0 +1,43 @@
+\begin{table}[htbp]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Endline share of households with average reading test level above 1, with exposure interaction}
+\begin{tabular*}{1\hsize}{@{\hskip\tabcolsep\extracolsep\fill}l*{5}{c}}
+\toprule
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         \\
+\midrule
+Subsidy group   &    0.073\sym{***}&    0.049\sym{**} &    0.053\sym{***}&    0.053\sym{***}&    0.051\sym{**} \\
+                &  (0.022)         &  (0.020)         &  (0.020)         &  (0.020)         &  (0.021)         \\
+Normal group    &    0.011         & 0.000066         &  -0.0012         &  -0.0015         & -0.00043         \\
+                &  (0.022)         &  (0.019)         &  (0.019)         &  (0.019)         &  (0.019)         \\
+Exposure*Subsidy group&  -0.0022         & -0.00033         & -0.00059         & -0.00058         & -0.00062         \\
+                & (0.0026)         & (0.0026)         & (0.0027)         & (0.0027)         & (0.0027)         \\
+Exposure*Normal group&   0.0024         & -0.00085         & -0.00071         & -0.00072         & -0.00033         \\
+                & (0.0092)         & (0.0089)         & (0.0090)         & (0.0090)         & (0.0091)         \\
+household average reading level above 1&                  &     0.17\sym{***}&     0.17\sym{***}&     0.17\sym{***}&     0.17\sym{***}\\
+                &                  &  (0.014)         &  (0.014)         &  (0.014)         &  (0.014)         \\
+Household average literacy, 0-7&                  &    0.050\sym{***}&    0.049\sym{***}&    0.048\sym{***}&    0.048\sym{***}\\
+                &                  & (0.0062)         & (0.0063)         & (0.0063)         & (0.0063)         \\
+Number family members in school&                  &   -0.013\sym{***}&   -0.013\sym{***}&   -0.013\sym{***}&   -0.013\sym{***}\\
+                &                  & (0.0044)         & (0.0044)         & (0.0044)         & (0.0044)         \\
+Monthly income 100,000s&                  &                  &    0.015         &    0.014         &    0.014         \\
+                &                  &                  &  (0.036)         &  (0.036)         &  (0.036)         \\
+Baseline any electricity&                  &                  &                  &   0.0073         &                  \\
+                &                  &                  &                  &  (0.020)         &                  \\
+Baseline gov. electricity&                  &                  &                  &                  &    0.026         \\
+                &                  &                  &                  &                  &  (0.024)         \\
+Baseline HPS biomass&                  &                  &                  &                  &     0.37\sym{***}\\
+                &                  &                  &                  &                  &  (0.087)         \\
+Baseline HPS solar&                  &                  &                  &                  &   -0.044         \\
+                &                  &                  &                  &                  &  (0.086)         \\
+Baseline diesel generator&                  &                  &                  &                  &  -0.0025         \\
+                &                  &                  &                  &                  &  (0.025)         \\
+Baseline own/share solar&                  &                  &                  &                  &    0.014         \\
+                &                  &                  &                  &                  &  (0.034)         \\
+\midrule
+cmean           &                  &                  &                  &                  &     0.73         \\
+\bottomrule
+\multicolumn{6}{l}{\footnotesize Marginal effects; Standard errors in parentheses}\\
+\multicolumn{6}{l}{\footnotesize  (d) for discrete change of dummy variable from 0 to 1}\\
+\multicolumn{6}{l}{\footnotesize \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular*}
+\end{table}

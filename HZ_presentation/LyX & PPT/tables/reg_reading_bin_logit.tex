@@ -1,0 +1,46 @@
+\begin{table}[htbp]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Endline share of households with average reading test level above 0, logit}
+\begin{tabular*}{1\hsize}{@{\hskip\tabcolsep\extracolsep\fill}l*{6}{c}}
+\toprule
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         \\
+\midrule
+above 0         &                  &                  &                  &                  &                  &                  \\
+Subsidy group   &     0.48\sym{**} &     0.35\sym{*}  &     0.36\sym{*}  &     0.36\sym{*}  &     0.35\sym{*}  &     0.34         \\
+                &   (0.19)         &   (0.19)         &   (0.19)         &   (0.20)         &   (0.20)         &   (0.21)         \\
+Normal group    &     0.25         &     0.18         &     0.18         &     0.16         &     0.16         &     0.16         \\
+                &   (0.18)         &   (0.17)         &   (0.16)         &   (0.17)         &   (0.17)         &   (0.17)         \\
+Exposure*Subsidy group&    0.017         &    0.021         &    0.020         &    0.022         &    0.022         &    0.022         \\
+                &  (0.028)         &  (0.027)         &  (0.027)         &  (0.027)         &  (0.027)         &  (0.027)         \\
+Exposure*Normal group&    0.082         &    0.063         &    0.063         &    0.064         &    0.068         &    0.064         \\
+                &  (0.087)         &  (0.091)         &  (0.091)         &  (0.095)         &  (0.091)         &  (0.095)         \\
+household average reading level above 0&                  &     0.84\sym{***}&     0.85\sym{***}&     0.85\sym{***}&     0.85\sym{***}&     0.85\sym{***}\\
+                &                  &   (0.13)         &   (0.13)         &   (0.13)         &   (0.13)         &   (0.13)         \\
+Household average literacy, 0-7&                  &     0.44\sym{***}&     0.45\sym{***}&     0.44\sym{***}&     0.44\sym{***}&     0.44\sym{***}\\
+                &                  &  (0.076)         &  (0.077)         &  (0.078)         &  (0.079)         &  (0.078)         \\
+Number family members in school&                  &   -0.024         &   -0.020         &   -0.020         &   -0.017         &   -0.019         \\
+                &                  &  (0.037)         &  (0.036)         &  (0.036)         &  (0.036)         &  (0.036)         \\
+Monthly income 100,000s&                  &                  &    -0.41\sym{*}  &    -0.42\sym{*}  &    -0.41\sym{*}  &    -0.42\sym{*}  \\
+                &                  &                  &   (0.24)         &   (0.24)         &   (0.24)         &   (0.24)         \\
+Baseline any electricity&                  &                  &                  &     0.21         &                  &     0.21         \\
+                &                  &                  &                  &   (0.16)         &                  &   (0.16)         \\
+Baseline gov. electricity&                  &                  &                  &                  &     0.72\sym{**} &                  \\
+                &                  &                  &                  &                  &   (0.36)         &                  \\
+Baseline HPS biomass&                  &                  &                  &                  &        0         &                  \\
+                &                  &                  &                  &                  &      (.)         &                  \\
+Baseline HPS solar&                  &                  &                  &                  &    -0.19         &                  \\
+                &                  &                  &                  &                  &   (0.41)         &                  \\
+Baseline diesel generator&                  &                  &                  &                  &     0.21         &                  \\
+                &                  &                  &                  &                  &   (0.19)         &                  \\
+Baseline own/share solar&                  &                  &                  &                  &    -0.11         &                  \\
+                &                  &                  &                  &                  &   (0.31)         &                  \\
+Baseline village gov. elec&                  &                  &                  &                  &                  &    0.064         \\
+                &                  &                  &                  &                  &                  &   (0.19)         \\
+\midrule
+cmean           &                  &                  &                  &                  &                  &     0.87         \\
+\bottomrule
+\multicolumn{7}{l}{\footnotesize Marginal effects; Standard errors in parentheses}\\
+\multicolumn{7}{l}{\footnotesize  (d) for discrete change of dummy variable from 0 to 1}\\
+\multicolumn{7}{l}{\footnotesize \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular*}
+\end{table}

@@ -1,0 +1,781 @@
+#LyX file created by tex2lyx 2.2
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin /Users/henryzhang/Dropbox/HPS/Data/Analysis/output/tables/
+\textclass beamer
+\options compress,t
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding iso8859-1
+\fontencoding default
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+\begin_inset Tabular 
+<lyxtabular version="3" rows="6" columns="11">
+<features rotate="0" booktabs="true" tabularvalignment="middle" tabularwidth="0pt">
+<column alignment="none" valignment="top" special=" ">
+<column alignment="none" valignment="top" width="2cm">
+<column alignment="none" valignment="top" special=" ">
+<column alignment="none" valignment="top" width="2cm">
+<column alignment="none" valignment="top" special=" ">
+<column alignment="none" valignment="top" width="1.5cm">
+<column alignment="none" valignment="top" special=" ">
+<column alignment="none" valignment="top" width="2cm">
+<column alignment="none" valignment="top" special=" ">
+<column alignment="none" valignment="top" width="3.75cm">
+<column alignment="none" valignment="top" special=" ">
+<row>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\series bold
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+shortstack{
+\end_layout
+
+\end_inset
+
+Company
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\series bold
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+shortstack{
+\end_layout
+
+\end_inset
+
+Where?
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\series bold
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+shortstack{
+\end_layout
+
+\end_inset
+
+People
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\series bold
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+shortstack{
+\end_layout
+
+\end_inset
+
+Product
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\series bold
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+shortstack{
+\end_layout
+
+\end_inset
+
+Price
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Boond Energy 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+UP and Rajasthan, India 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+10,000 units as of 2014 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Microgrid 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+INR 13000-47000 for 40-200 Watt units
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Mera Gao Power 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Barabanki, UP, India
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+150,000 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Microgrid 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+INR 100 per household, per month
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Simpa Networks 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+UP, India 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+153,512 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Home system 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+INR 13000-26000 unit cost, financed through INR 50 monthly installments
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+OMC Power
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Northern India 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+NA 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Solar lanterns 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+INR 150 per month for solar lanterns, 350 for power boxes
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Minda Nexgentech
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Northern India 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+16,600 as of 2013 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Microgrid 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+INR 160 per household per month 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

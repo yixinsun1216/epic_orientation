@@ -1,0 +1,19 @@
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{adjustbox}{max
+width={.97\textwidth},caption={Share of households using HPS solar},nofloat=table}
+\begin{tabular}{l*{2}{c}}
+\toprule
+                &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}\\
+                &\multicolumn{1}{c}{Endline Survey}&\multicolumn{1}{c}{Administrative Data}\\
+\midrule
+Subsidy treatment village (=1)&     0.20\sym{***}&     0.13\sym{***}\\
+                &  (0.039)         &  (0.028)         \\
+No subsidy treatment village (=1)&    0.033         &    0.015         \\
+                &  (0.028)         &  (0.021)         \\
+Baseline Controls &      Yes         &      Yes         \\
+\midrule
+cmean           &    0.026         &        0         \\
+\bottomrule
+\multicolumn{3}{p{\textwidth}}{\footnotesize Includes baseline electricity source indicators, baseline monthly income, and baseline equivalent of outcome variable controls. Standard errors clustered at the village level in parentheses.}\\
+\multicolumn{3}{p{\textwidth}}{\footnotesize \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular}\end{adjustbox}

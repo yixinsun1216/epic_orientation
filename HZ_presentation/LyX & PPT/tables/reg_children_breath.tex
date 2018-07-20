@@ -1,0 +1,37 @@
+\begin{table}[htbp]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Whether household children experience respiratory problems}
+\begin{tabular*}{1\hsize}{@{\hskip\tabcolsep\extracolsep\fill}l*{6}{c}}
+\toprule
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         \\
+\midrule
+Subsidy treatment village (=1)&    0.011         &    0.011         &    0.012         &    0.012         &    0.012         &    0.010         \\
+                & (0.0082)         & (0.0083)         & (0.0083)         & (0.0083)         & (0.0082)         & (0.0083)         \\
+No subsidy treatment village (=1)&   0.0035         &   0.0047         &   0.0039         &   0.0041         &   0.0041         &   0.0040         \\
+                & (0.0082)         & (0.0082)         & (0.0083)         & (0.0083)         & (0.0082)         & (0.0084)         \\
+children wheezing in chest last year, y/n&                  &    0.068\sym{***}&    0.071\sym{***}&    0.071\sym{***}&    0.071\sym{***}&    0.072\sym{***}\\
+                &                  &  (0.025)         &  (0.026)         &  (0.026)         &  (0.026)         &  (0.026)         \\
+Monthly income 100,000s&                  &                  &   -0.068\sym{*}  &   -0.065\sym{*}  &   -0.062         &   -0.064\sym{*}  \\
+                &                  &                  &  (0.038)         &  (0.038)         &  (0.038)         &  (0.037)         \\
+Baseline any electricity&                  &                  &                  &  -0.0037         &                  &  -0.0039         \\
+                &                  &                  &                  & (0.0059)         &                  & (0.0059)         \\
+Baseline gov. electricity&                  &                  &                  &                  &  -0.0038         &                  \\
+                &                  &                  &                  &                  &  (0.013)         &                  \\
+Baseline HPS biomass&                  &                  &                  &                  &   -0.015         &                  \\
+                &                  &                  &                  &                  &  (0.012)         &                  \\
+Baseline HPS solar&                  &                  &                  &                  &    0.018         &                  \\
+                &                  &                  &                  &                  &  (0.052)         &                  \\
+Baseline diesel generator&                  &                  &                  &                  & -0.00078         &                  \\
+                &                  &                  &                  &                  & (0.0065)         &                  \\
+Baseline own/share solar&                  &                  &                  &                  &   -0.014         &                  \\
+                &                  &                  &                  &                  &  (0.012)         &                  \\
+Baseline village gov. elec&                  &                  &                  &                  &                  &   0.0090         \\
+                &                  &                  &                  &                  &                  & (0.0100)         \\
+\midrule
+cmean           &                  &                  &                  &                  &                  &    0.024         \\
+\bottomrule
+\multicolumn{7}{l}{\footnotesize Marginal effects; Standard errors in parentheses}\\
+\multicolumn{7}{l}{\footnotesize  (d) for discrete change of dummy variable from 0 to 1}\\
+\multicolumn{7}{l}{\footnotesize \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular*}
+\end{table}

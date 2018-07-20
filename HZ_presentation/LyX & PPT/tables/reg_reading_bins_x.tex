@@ -1,0 +1,40 @@
+\begin{table}[htbp]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Endline share of households with average reading test level above each cutoff, with exposure interaction}
+\begin{tabular*}{1\hsize}{@{\hskip\tabcolsep\extracolsep\fill}l*{4}{c}}
+\toprule
+                &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}\\
+                &\multicolumn{1}{c}{above 0}&\multicolumn{1}{c}{above 1}&\multicolumn{1}{c}{above 2}&\multicolumn{1}{c}{above 3}\\
+\midrule
+Subsidy group   &    0.035\sym{**} &    0.048\sym{**} &    0.024         &   0.0088         \\
+                &  (0.014)         &  (0.022)         &  (0.023)         &  (0.023)         \\
+Normal group    &    0.019         &   0.0018         &   0.0094         &    0.018         \\
+                &  (0.014)         &  (0.019)         &  (0.022)         &  (0.022)         \\
+Exposure*Subsidy group&   0.0014         &  0.00072         &   0.0057\sym{**} &   0.0073\sym{***}\\
+                & (0.0016)         & (0.0026)         & (0.0025)         & (0.0021)         \\
+Exposure*Normal group&   0.0043         &   0.0013         &   0.0031         &  0.00083         \\
+                & (0.0034)         & (0.0096)         & (0.0085)         & (0.0055)         \\
+household average reading level above 0&    0.089\sym{***}&                  &                  &                  \\
+                &  (0.014)         &                  &                  &                  \\
+Household average literacy, 0-7&    0.030\sym{***}&    0.054\sym{***}&    0.075\sym{***}&    0.086\sym{***}\\
+                & (0.0047)         & (0.0062)         & (0.0069)         & (0.0075)         \\
+Number family members in school&   0.0014         &   -0.013\sym{***}&   -0.033\sym{***}&   -0.052\sym{***}\\
+                & (0.0027)         & (0.0045)         & (0.0050)         & (0.0060)         \\
+Monthly income 100,000s&   -0.043         &    0.019         &    0.014         &    0.032         \\
+                &  (0.043)         &  (0.037)         &  (0.034)         &  (0.036)         \\
+Baseline any electricity&    0.022\sym{*}  &    0.027         &    0.042\sym{**} &    0.040\sym{*}  \\
+                &  (0.012)         &  (0.020)         &  (0.020)         &  (0.020)         \\
+household average reading level above 1&                  &     0.16\sym{***}&                  &                  \\
+                &                  &  (0.014)         &                  &                  \\
+household average reading level above 2&                  &                  &     0.21\sym{***}&                  \\
+                &                  &                  &  (0.016)         &                  \\
+household average reading level above 3&                  &                  &                  &     0.22\sym{***}\\
+                &                  &                  &                  &  (0.020)         \\
+\midrule
+Observations    &     2799         &     2799         &     2799         &     2799         \\
+\bottomrule
+\multicolumn{5}{l}{\footnotesize Marginal effects; Standard errors in parentheses}\\
+\multicolumn{5}{l}{\footnotesize  (d) for discrete change of dummy variable from 0 to 1}\\
+\multicolumn{5}{l}{\footnotesize \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular*}
+\end{table}

@@ -1,0 +1,58 @@
+\begin{table}\fontsize{9}{11}\selectfont
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Endline monthly income}
+\setlength{\linewidth}{.1cm}\newcommand{\contents}{\begin{tabular}{l*{1}{c}}
+\toprule
+& Monthly Income (INR '000s)\\
+& (1) \\ \hline
+\textbf{\emph{Instrumental Variables}}&         \\
+Hours of electricity&   0.15      \\
+                & (0.35)             \\
+
+\textbf{\emph{Reduced Form}}&                  \\
+Subsidy treatment village (=1)&   0.18        \\
+                & (0.31)              \\
+No subsidy treatment village (=1)&   0.63\sym{*}  \\
+                                 & (0.33)         \\
+                \addlinespace
+Baseline Controls                &      Yes         \\
+               
+Control mean                     &    7.5         \\
+Observations                     &     2692         \\
+\bottomrule
+\multicolumn{2}{p{\linewidth}}{\footnotesize \fontsize{8}{11}\selectfont \linespread{1} Includes baseline electricity source indicators, baseline monthly income, and baseline equivalent of outcome variable controls. Standard errors clustered at the village level in parentheses.}\\
+\multicolumn{2}{p{\linewidth}}{\footnotesize \fontsize{8}{11}\selectfont \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+
+\end{tabular}}
+\setbox0=\hbox{\contents}
+\setlength{\linewidth}{\wd0-2\tabcolsep-.25em}
+\contents
+\end{table}
+
+% \def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+% \begin{adjustbox}{max
+% width={.96\textwidth},caption={Income and Occupation},nofloat=table}
+% \begin{tabular}{l*{2}{c}}
+% \toprule
+% & Monthly Income & \shortstack{Agricultural\\Occupation (=1)} \\
+% & (1) & (2) \\ \hline
+% \textbf{\emph{Instrumental Variables}}&                  &                  \\
+% Hours of electricity&   0.0015         &   -0.035         \\
+%                 & (0.0035)         &  (0.030)         \\
+% 
+% 
+% \textbf{\emph{Reduced Form}}&                  &                  \\
+% Subsidy treatment village (=1)&   0.0018         &   -0.033\sym{*}  \\
+%                 & (0.0031)         &  (0.019)         \\
+% No subsidy treatment village (=1)&   0.0063\sym{*}  &    0.038\sym{*}  \\
+%                 & (0.0033)         &  (0.020)         \\
+%                 \addlinespace
+% Baseline Controls &      Yes         &      Yes         \\
+%                
+% Control mean           &    0.075         &     0.32         \\
+% Observations    &     2692         &     2868         \\
+% \bottomrule
+% \multicolumn{3}{p{\textwidth}}{\footnotesize Includes baseline electricity source indicators, baseline monthly income, and baseline equivalent of outcome variable controls. Standard errors clustered at the village level in parentheses.}\\
+% \multicolumn{3}{p{\textwidth}}{\footnotesize \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+% \end{tabular}\end{adjustbox}
+

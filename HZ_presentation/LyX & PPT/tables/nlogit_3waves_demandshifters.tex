@@ -1,0 +1,36 @@
+\begin{table}[htbp]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+
+\caption{Nested Logit Estimates of Electricity Source Demand\label{tab:demand}}
+\scalebox{.7}{
+\begin{tabular}{l*{1}{cccccccc}}
+\toprule
+& \multicolumn{1}{c}{Nested Logit} & \\
+&\multicolumn{1}{c}{(1)}         &            \\
+\midrule
+
+
+\multicolumn{5}{c}{\emph{Demand Shifters}} \\
+\addlinespace
+& Grid     & Diesel  & HPS  & Own Solar\\
+Solid roof (=1) &       0.473\sym{***} &       0.330\sym{***} &       -0.100        &       0.250\sym{**}     \\
+&     (0.081)  &     (0.126)  &     (0.165) &     (0.117) \\     
+Monthly income (Rs. 10,000)&       0.191\sym{***}&       0.125\sym{*} &       0.295\sym{***}&       0.192\sym{***}\\
+&     (0.055)  &     (0.075) &     (0.111) &     (0.071)\\ 
+Number of rooms     &       0.062\sym{**} &       0.105\sym{**} &       0.023         &       0.138\sym{***}   \\
+&     (0.028) &     (0.042)&     (0.064) &     (0.038)\\
+Permanent House (=1)         &       0.438\sym{***} &      0.156   &      -0.096           &       0.051      \\
+&     (0.081)  &     (0.133) &     (0.179) &     (0.123) \\
+Agricultural land (=1)&       0.119\sym{*}  &       -0.251\sym{*}          &       0.696\sym{***} &       0.412\sym{***}\\
+&     (0.070)&     (0.109)&     (0.153)&     (0.109) \\
+Number of adults    &       0.127\sym{***} &       0.081\sym{**} &       0.027          &       0.115\sym{***}\\
+&     (0.020)&     (0.033) &     (0.040)&     (0.026)\\
+Literacy of household head&       0.057\sym{***} &       0.067\sym{***} &       -0.018       &      -0.005       \\
+&     (0.016)&     (0.024)&     (0.035)  &     (0.024) \\
+\midrule
+
+
+Observations        &    28996         &       &            &    &            &    &              &         \\
+\bottomrule
+\end{tabular}}
+\end{table}

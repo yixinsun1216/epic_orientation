@@ -1,0 +1,20 @@
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{adjustbox}{max
+width={.97\textwidth},caption={Endline 1 electricity and asset outcomes},nofloat=table}
+\begin{tabular}{l*{4}{c}}
+\toprule
+& \shortstack{HPS\\Electricity (=1)} & \shortstack{Daily Hours of\\Electricity Use} & \shortstack{Light Bulb\\Ownership (=1)} & \shortstack{Mobile Phone\\Ownership (=1)} \\
+& (1) & (2) & (3) &(4) \\ \hline
+Subsidy treatment village (=1)&   0.066\sym{***} &  0.94\sym{***}&     0.15\sym{***} &    0.034\sym{**} \\
+               & (0.021) &   (0.24)         &  (0.047)   &  (0.014)       \\
+No subsidy treatment village (=1)& 0.0001 &    0.52\sym{**} &    0.098\sym{**} &    0.022 \\
+              & (0.016)  &   (0.20)         &  (0.044)   &  (0.013)      \\
+                \addlinespace
+Baseline Controls &    Yes &  Yes         &      Yes     & Yes    \\
+
+Control mean     & 0.026      &     1.16         &     0.32   &     0.88      \\
+Observations    & 3036&     2868         &     3001    &     3001     \\
+\bottomrule
+\multicolumn{3}{p{\textwidth}}{\footnotesize Includes baseline electricity source indicators, baseline monthly income, and baseline equivalent of outcome variable controls. Standard errors clustered at the village level in parentheses.}\\
+\multicolumn{3}{p{\textwidth}}{\footnotesize \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular}\end{adjustbox}

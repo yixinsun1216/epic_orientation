@@ -1,0 +1,37 @@
+\begin{table}[htbp]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Endline mobile phone ownership}
+\begin{tabular*}{1\hsize}{@{\hskip\tabcolsep\extracolsep\fill}l*{6}{c}}
+\toprule
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         \\
+\midrule
+Subsidy group   &    0.037\sym{**} &    0.033\sym{**} &    0.033\sym{**} &    0.033\sym{**} &    0.034\sym{**} &    0.035\sym{**} \\
+                &  (0.018)         &  (0.014)         &  (0.014)         &  (0.014)         &  (0.014)         &  (0.014)         \\
+Normal group    &    0.031\sym{*}  &    0.022\sym{*}  &    0.021         &    0.020         &    0.020         &    0.020         \\
+                &  (0.017)         &  (0.013)         &  (0.013)         &  (0.013)         &  (0.013)         &  (0.013)         \\
+Cell phone      &                  &     0.22\sym{***}&     0.21\sym{***}&     0.21\sym{***}&     0.21\sym{***}&     0.21\sym{***}\\
+                &                  &  (0.020)         &  (0.020)         &  (0.020)         &  (0.020)         &  (0.020)         \\
+Monthly income  &                  &                  &0.00000064\sym{***}&0.00000061\sym{***}&0.00000062\sym{***}&0.00000061\sym{***}\\
+                &                  &                  &(0.00000023)         &(0.00000022)         &(0.00000023)         &(0.00000022)         \\
+Baseline any electricity&                  &                  &                  &    0.017         &                  &    0.018         \\
+                &                  &                  &                  &  (0.011)         &                  &  (0.011)         \\
+Baseline gov. electricity&                  &                  &                  &                  &   0.0073         &                  \\
+                &                  &                  &                  &                  &  (0.019)         &                  \\
+Baseline HPS biomass&                  &                  &                  &                  &    0.049\sym{***}&                  \\
+                &                  &                  &                  &                  &  (0.018)         &                  \\
+Baseline HPS solar&                  &                  &                  &                  &    0.080\sym{***}&                  \\
+                &                  &                  &                  &                  &  (0.027)         &                  \\
+Baseline diesel generator&                  &                  &                  &                  &    0.022         &                  \\
+                &                  &                  &                  &                  &  (0.015)         &                  \\
+Baseline own/share solar&                  &                  &                  &                  &   0.0072         &                  \\
+                &                  &                  &                  &                  &  (0.022)         &                  \\
+Baseline village gov. elec&                  &                  &                  &                  &                  &   -0.016         \\
+                &                  &                  &                  &                  &                  &  (0.011)         \\
+\midrule
+cmean           &                  &                  &                  &                  &                  &     0.88         \\
+\bottomrule
+\multicolumn{7}{l}{\footnotesize Marginal effects; Standard errors in parentheses}\\
+\multicolumn{7}{l}{\footnotesize  (d) for discrete change of dummy variable from 0 to 1}\\
+\multicolumn{7}{l}{\footnotesize \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular*}
+\end{table}

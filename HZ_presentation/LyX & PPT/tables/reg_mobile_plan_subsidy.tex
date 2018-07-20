@@ -1,0 +1,34 @@
+\begin{table}[htbp]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Mobile Phone Plan}
+\begin{tabular*}{1\hsize}{@{\hskip\tabcolsep\extracolsep\fill}l*{4}{D{.}{.}{-1}}}
+\toprule
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}\\
+                    &\multicolumn{1}{c}{Base Var}&\multicolumn{1}{c}{Base HH Elec}&\multicolumn{1}{c}{Base Vill Elec}&\multicolumn{1}{c}{End Vill Elec}\\
+\midrule
+Subsidy group       &       0.040\sym{***}&       0.045\sym{**} &       0.052\sym{***}&       0.041\sym{**} \\
+                    &     (0.014)         &     (0.018)         &     (0.018)         &     (0.018)         \\
+Mobile phone use, y/n&        0.23\sym{***}&                     &                     &                     \\
+                    &     (0.025)         &                     &                     &                     \\
+Baseline gov. electricity&                     &       0.055\sym{***}&                     &                     \\
+                    &                     &     (0.020)         &                     &                     \\
+Baseline HPS biomass&                     &        0.12\sym{***}&                     &                     \\
+                    &                     &     (0.030)         &                     &                     \\
+Baseline HPS solar  &                     &       0.093\sym{***}&                     &                     \\
+                    &                     &     (0.027)         &                     &                     \\
+Baseline diesel generator&                     &       0.064\sym{***}&                     &                     \\
+                    &                     &     (0.016)         &                     &                     \\
+Baseline own/share solar&                     &       0.039         &                     &                     \\
+                    &                     &     (0.034)         &                     &                     \\
+Baseline village gov. elec&                     &                     &      -0.057\sym{***}&                     \\
+                    &                     &                     &     (0.019)         &                     \\
+Endline village gov. elec&                     &                     &                     &       0.021         \\
+                    &                     &                     &                     &     (0.017)         \\
+\midrule
+Observations        &        1949         &        1953         &        1953         &        1953         \\
+\bottomrule
+\multicolumn{5}{l}{\footnotesize Marginal effects; Standard errors in parentheses}\\
+\multicolumn{5}{l}{\footnotesize  (d) for discrete change of dummy variable from 0 to 1}\\
+\multicolumn{5}{l}{\footnotesize \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular*}
+\end{table}

@@ -1,0 +1,67 @@
+\begin{table}[htbp]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Nested Logit, 3 panels}
+\begin{tabular}{l*{1}{cc}}
+\toprule
+                    &\multicolumn{1}{c}{(1)}         &            \\
+                    & Coefficient         &          SE\\
+\midrule
+alternative         &                     &            \\
+Monthly price (Rs. 100,000)&      -0.820\sym{***}&     (0.062)\\
+Load (100 watts)    &      -0.002\sym{***}&     (0.000)\\
+Hours/day use       &      -0.027\sym{**} &     (0.014)\\
+\midrule
+HPS\_                &                     &            \\
+Solid roof (=1)     &      -0.085         &     (0.158)\\
+Monthly income (Rs. 100,000)&       0.307\sym{***}&     (0.107)\\
+Number of rooms     &       0.028         &     (0.061)\\
+Pukka (=1)          &      -0.055         &     (0.170)\\
+Owns agricultural land (=1)&       0.692\sym{***}&     (0.150)\\
+Number of adults    &       0.036         &     (0.038)\\
+Literacy of household head&      -0.014         &     (0.034)\\
+Constant            &      -0.964\sym{***}&     (0.225)\\
+\midrule
+diesel\_             &                     &            \\
+Solid roof (=1)     &       0.228\sym{**} &     (0.115)\\
+Monthly income (Rs. 100,000)&       0.132\sym{*}  &     (0.072)\\
+Number of rooms     &       0.167\sym{***}&     (0.040)\\
+Pukka (=1)          &       0.065         &     (0.122)\\
+Owns agricultural land (=1)&      -0.017         &     (0.101)\\
+Number of adults    &      -0.007         &     (0.030)\\
+Literacy of household head&       0.073\sym{***}&     (0.023)\\
+Constant            &      -1.399\sym{***}&     (0.148)\\
+\midrule
+grid\_               &                     &            \\
+Solid roof (=1)     &       0.450\sym{***}&     (0.079)\\
+Monthly income (Rs. 100,000)&       0.194\sym{***}&     (0.054)\\
+Number of rooms     &       0.067\sym{**} &     (0.028)\\
+Pukka (=1)          &       0.454\sym{***}&     (0.080)\\
+Owns agricultural land (=1)&       0.135\sym{**} &     (0.069)\\
+Number of adults    &       0.127\sym{***}&     (0.020)\\
+Literacy of household head&       0.059\sym{***}&     (0.016)\\
+Constant            &       0.232         &     (0.189)\\
+\midrule
+ownsolar\_           &                     &            \\
+Solid roof (=1)     &       0.243\sym{**} &     (0.113)\\
+Monthly income (Rs. 100,000)&       0.212\sym{***}&     (0.069)\\
+Number of rooms     &       0.122\sym{***}&     (0.037)\\
+Pukka (=1)          &       0.081         &     (0.120)\\
+Owns agricultural land (=1)&       0.401\sym{***}&     (0.106)\\
+Number of adults    &       0.126\sym{***}&     (0.025)\\
+Literacy of household head&      -0.016         &     (0.023)\\
+Constant            &      -2.591\sym{***}&     (0.173)\\
+\midrule
+ongrid\_tau          &                     &            \\
+Constant            &       1.000         &(180141.582)\\
+\midrule
+offgrid\_tau         &                     &            \\
+Constant            &       1.193\sym{***}&     (0.073)\\
+\midrule
+unelec\_tau          &                     &            \\
+Constant            &       1.000         &         (.)\\
+\midrule
+Observations        &     31965.0         &            \\
+\bottomrule
+\multicolumn{3}{l}{\footnotesize The off grid nest includes HPS solar, other solar, and diesel.}\\
+\end{tabular}
+\end{table}

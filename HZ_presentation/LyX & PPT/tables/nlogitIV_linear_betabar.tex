@@ -1,0 +1,22 @@
+\begin{table}[htbp]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Linear Price IV \label{logitsecond}}
+\begin{tabular}{l*{2}{c}}
+\toprule
+                
+                &\multicolumn{1}{c}{OLS}&\multicolumn{1}{c}{\shortstack{Second Stage\\ Price IV}}\\
+                &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}\\
+\midrule
+Price (Rs. 100) &    -0.26\sym{**} &    -1.32\sym{*}  \\
+                &   (0.11)         &   (0.76)         \\
+Hours of supply on peak&     0.50\sym{*}  &     0.52\sym{**} \\
+                &   (0.26)         &   (0.26)         \\
+Hours of supply off peak&    -0.12\sym{*}  &    -0.14\sym{**} \\
+                &  (0.070)         &  (0.068)         \\
+$\xi_{tj}$ mean effects & Yes & Yes                \\
+\midrule
+Observations    &      996         &      996         \\
+\bottomrule
+\multicolumn{3}{p{.6\textwidth}}{\footnotesize Standard errors cluster at the village level in parentheses. Includes mean unobserved energy source by time effects, $\xi_{tj}$.}\\
+\end{tabular}
+\end{table}

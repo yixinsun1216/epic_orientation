@@ -1,0 +1,30 @@
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{adjustbox}{max
+width={\textwidth},caption={Experiences respiratory problems (=1)},nofloat=table}
+\begin{tabular}{l*{2}{c}}
+\toprule
+& Adults & Children \\
+& (1) & (2) \\ \hline
+\textbf{\emph{Instrumental Variables}}&                  &                  \\
+Hours of electricity&    0.027         &    0.014         \\
+                &  (0.027)         &  (0.012)         \\
+
+
+\textbf{\emph{Reduced Form}}&                  &                  \\
+Subsidy treatment village (=1)&    0.026         &    0.012         \\
+                &  (0.021)         & (0.0082)         \\
+No subsidy treatment village (=1)&    0.017         &   0.0041         \\
+                &  (0.018)         & (0.0082)         \\
+Monthly income 100,000s&   -0.079         &   -0.062         \\
+                &  (0.093)         &  (0.038)         \\
+                \addlinespace
+Baseline Controls &      Yes         &      Yes         \\
+\midrule
+cmean           &     0.14         &    0.024         \\
+Observations    &     2710         &     2669         \\
+\bottomrule
+\multicolumn{3}{p{\textwidth}}{\footnotesize Includes baseline electricity source indicators, baseline monthly income, and baseline equivalent of outcome variable controls. Standard errors clustered at the village level in parentheses.}\\
+
+\multicolumn{3}{p{\textwidth}}{\footnotesize \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular}\end{adjustbox}
+}

@@ -1,0 +1,36 @@
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{adjustbox}{max
+width={\textwidth},caption={Income and Occupation},nofloat=table}
+\begin{tabular}{l*{2}{c}}
+\toprule
+& Monthly Income & \shortstack{Agricultural\\Occupation (=1)} \\
+& (1) & (2) \\ \hline
+\textbf{\emph{Instrumental Variables}}&                  &                  \\
+Hours of electricity&   0.0015         &   -0.035         \\
+                & (0.0035)         &  (0.030)         \\
+Baseline Controls &      Yes         &      Yes         \\
+\midrule
+cmean           &    0.075         &     0.32         \\
+Observations    &     2692         &     2868         \\
+\bottomrule
+\multicolumn{3}{p{\textwidth}}{\centering \footnotesize Marginal effects; Standard errors in parentheses}\\
+\multicolumn{3}{p{\textwidth}}{\centering \footnotesize Controls included: baseline electricity source indicators, baseline monthly income baseline equivalent of outcome variable}\\
+\multicolumn{3}{p{\textwidth}}{\centering \footnotesize  (d) for discrete change of dummy variable from 0 to 1}\\
+\multicolumn{3}{p{\textwidth}}{\centering \footnotesize \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular}\end{adjustbox}
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{2}{c}}
+\toprule
+\midrule
+\textbf{\emph{Reduced Form}}&                  &                  \\
+Subsidy treatment village (=1)&   0.0018         &   -0.033\sym{*}  \\
+                & (0.0031)         &  (0.019)         \\
+No subsidy treatment village (=1)&   0.0063\sym{*}  &    0.038\sym{*}  \\
+                & (0.0033)         &  (0.020)         \\
+\bottomrule
+\multicolumn{3}{p{\textwidth}}{\centering \footnotesize Marginal effects; Standard errors in parentheses}\\
+\multicolumn{3}{p{\textwidth}}{\centering \footnotesize  (d) for discrete change of dummy variable from 0 to 1}\\
+\multicolumn{3}{p{\textwidth}}{\centering \footnotesize \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular}\end{adjustbox}
+}

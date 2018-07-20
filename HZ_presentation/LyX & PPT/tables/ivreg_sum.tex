@@ -1,0 +1,27 @@
+\begin{table}
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Endline 1 welfare outcomes}
+\scalebox{0.7}{
+\begin{tabular}{l*{4}{c}}
+\toprule
+& \shortstack{Monthly Inc. \\(INR '000s)} & \shortstack{Night study\\time (minutes)} & \shortstack{Adult\\Resp. Problems} & \shortstack{Children\\Resp. Problems} \\
+& (1) & (2) & (3) & (4) \\ \hline
+\textbf{\emph{Instrumental Variables}}&    &  & &   \\
+Hours of electricity&   0.15  & 0.51 & 0.027 & 0.014   \\
+                & (0.35)    & (3.40) &(0.027) & (0.012)        \\
+
+\textbf{\emph{Reduced Form}}&         &  & &       \\
+Subsidy treatment village (=1)&   0.18  & -0.60 & 0.026 & 0.012     \\
+                & (0.31)      & (3.15) & (0.021) & (0.008)       \\
+No subsidy treatment village (=1)&   0.63\sym{*} & 7.00\sym{**} & 0.017 & 0.004 \\
+                                 & (0.33) & (2.93)& (0.018) & (0.008)        \\
+                \addlinespace
+Baseline Controls                &      Yes & Yes & Yes & Yes       \\
+               
+Control mean                     &    7.5  & 54.7 & 0.14 & 0.024      \\
+Observations                     &     2692 & 2021  &2710 & 2669      \\
+\bottomrule
+\multicolumn{5}{p{\textwidth}}{\footnotesize Includes baseline electricity source indicators, baseline monthly income, and baseline equivalent of outcome variable controls. Standard errors clustered at the village level in parentheses.}\\
+
+\end{tabular}}
+\end{table}

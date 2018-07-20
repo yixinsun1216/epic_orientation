@@ -1,0 +1,41 @@
+\begin{table}[htbp]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Nested Logit}
+\scalebox{.64}{
+\begin{tabular}{l*{1}{cccccccc}}
+\toprule
+& \multicolumn{1}{c}{Nested Logit} & \\
+&\multicolumn{1}{c}{(1)}         &            \\
+\midrule
+\multicolumn{5}{c}{\emph{Source Coefficients}}\\
+\addlinespace
+Monthly price (Rs. 100) & -1.301\sym{***} &&&\\
+&     (0.110) &&&\\
+Daily supply hours &  -0.309\sym{***} &&& \\
+&     (0.071) &&&\\
+
+\multicolumn{5}{c}{\emph{Demand Shifters}} \\
+\addlinespace
+& Grid     & Diesel  & HPS  & Own Solar\\
+Solid roof (=1) &    0.622\sym{***}&  0.335\sym{**} &            0.062         &      0.445\sym{***}     \\
+& (0.115)  & (0.139) & (0.159) & (0.162) \\     
+Monthly income (Rs. 100,000)&       2.205\sym{***}&      0.484         &            3.696\sym{***}&            2.793\sym{***}\\
+&(0.712)  & (0.809) &  (1.053) &       (0.789) \\ 
+Number of rooms     &       0.092\sym{**} &     0.137\sym{***}&            0.070         &            0.181\sym{***}    \\
+& (0.038) &  (0.049) & (0.059) &    (0.046) \\
+Pukka (=1)          &       0.308\sym{***}&     -0.048         &           -0.078         &          0.316\sym{**}      \\
+& (0.110) &  (0.150) &   (0.170) &  (0.158) \\
+Agricultural land (=1)&       0.168\sym{*}   &       0.101          &       0.511\sym{***} &       0.538\sym{***}\\
+&     (0.098)&     (0.121)&     (0.144)&     (0.157) \\
+Number of adults    &       0.110\sym{***} &       0.117\sym{***}&       0.036          &       0.100\sym{***}\\
+&     (0.028)&     (0.038) &     (0.037)&     (0.034)\\
+Literacy of household head&       0.081\sym{***} &       0.075\sym{***} &       0.003         &      -0.015        \\
+&     (0.022)&     (0.027) &     (0.033)  &     (0.031) \\
+\midrule
+Constant & 1.501\sym{***} &0.714\sym{***} & 1.210\sym{***} &-1.426\sym{***} \\
+& (0.445) & (0.260) & (0.427) &  (0.505)\\
+
+Observations        &     21896.0         &       &            &    &            &    &              &         \\
+\bottomrule
+\end{tabular}}
+\end{table}

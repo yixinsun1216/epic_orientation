@@ -1,0 +1,89 @@
+\begin{table}[htbp]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Conditional Logit, Interactions}
+\scalebox{.9}{
+\begin{tabular}{l*{1}{c}}
+\toprule
+                    &\multicolumn{1}{c}{(1)}\\
+                    &\multicolumn{1}{c}{Source choice}\\
+\midrule
+
+Monthly price (Rs. 100,000)&      -1.627\sym{***}\\
+                    &     (0.255)         \\
+
+Load (watts)        &    0.000418         \\
+                    &   (0.00198)         \\
+
+Hours/day use       &      -1.333\sym{***}\\
+                    &     (0.282)         \\
+
+Price*Number of rooms&       0.190\sym{***}\\
+                    &    (0.0668)         \\
+
+Price*Pukka (=1)    &      -0.299         \\
+                    &     (0.224)         \\
+
+Price*Solid roof (=1)&       0.144         \\
+                    &     (0.215)         \\
+
+Price*Owns agricultural land&      -0.205         \\
+                    &     (0.198)         \\
+
+Price*Number of adults&      0.0775         \\
+                    &    (0.0548)         \\
+
+Price*Monthly income (Rs. 100,000)&      -3.678\sym{**} \\
+                    &     (1.495)         \\
+
+Price*Literacy of hh head&       0.128\sym{***}\\
+                    &    (0.0396)         \\
+
+Load*Number of rooms&    0.000539         \\
+                    &  (0.000598)         \\
+
+Load*Pukka (=1)     &    -0.00664\sym{***}\\
+                    &   (0.00181)         \\
+
+Load*Solid roof (=1)&     0.00215         \\
+                    &   (0.00176)         \\
+
+Load*Owns agricultural land&    0.000126         \\
+                    &   (0.00160)         \\
+
+Load*Number of adults&    -0.00129\sym{***}\\
+                    &  (0.000476)         \\
+
+Load*Monthly income (Rs. 100,000)&    -0.00560         \\
+                    &    (0.0118)         \\
+
+Load*Literacy of hh head&    0.000156         \\
+                    &  (0.000348)         \\
+
+Hours use*Pukka (=1)&       0.567\sym{**} \\
+                    &     (0.259)         \\
+
+Hours use*Solid roof (=1)&       0.194         \\
+                    &     (0.261)         \\
+
+Hours use*Owns agricultural land&      -0.567\sym{**} \\
+                    &     (0.235)         \\
+
+Hours use*Number adults&       0.136\sym{**} \\
+                    &    (0.0579)         \\
+
+Hours use*Monthly income (Rs. 100,000)&       0.301         \\
+                    &     (1.428)         \\
+
+Hours use*Literacy of hh head&     -0.0273         \\
+                    &    (0.0484)         \\
+
+Hours use*Number of rooms&      -0.101         \\
+                    &    (0.0774)         \\
+
+\midrule
+Observations        &       51824         \\
+\bottomrule
+\multicolumn{2}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{2}{l}{\footnotesize \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular}}
+\end{table}

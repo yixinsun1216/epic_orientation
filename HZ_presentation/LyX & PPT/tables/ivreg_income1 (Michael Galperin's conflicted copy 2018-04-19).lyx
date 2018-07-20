@@ -1,0 +1,764 @@
+#LyX file created by tex2lyx 2.2
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin /Users/michaelgalperin/Dropbox/EPIC/HPS/Data/Analysis/output/tables/
+\textclass beamer
+\options compress,t
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding iso8859-1
+\fontencoding default
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+fontsize{9}{11}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+selectfont
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\def\sym #1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Endline monthly income
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+setlength{
+\backslash
+linewidth}{.1cm}
+\end_layout
+
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\contents}{\begin{tabular}{l*{1}{c}}
+\toprule
+& Monthly Income (INR '000s)\\
+& (1) \\ \hline
+\textbf{\emph{Instrumental Variables}}&         \\
+Hours of electricity&   0.15      \\
+                & (0.35)             \\
+
+\textbf{\emph{Reduced Form}}&                  \\
+Subsidy treatment village (=1)&   0.18        \\
+                & (0.31)              \\
+No subsidy treatment village (=1)&   0.63\sym{*}  \\
+                                 & (0.33)         \\
+                \addlinespace
+Baseline Controls                &      Yes         \\
+               
+Control mean                     &    7.5         \\
+Observations                     &     2692         \\
+\bottomrule
+\multicolumn{2}{p{\linewidth}}{\footnotesize \fontsize{8}{11}\selectfont \linespread{1} Includes baseline electricity source indicators, baseline monthly income, and baseline equivalent of outcome variable controls. Standard errors clustered at the village level in parentheses.}\\
+\multicolumn{2}{p{\linewidth}}{\footnotesize \fontsize{8}{11}\selectfont \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+
+\end{tabular}}
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+setbox
+\end_layout
+
+\end_inset
+
+0=
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+hbox
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+contents
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+setlength{
+\backslash
+linewidth}{
+\backslash
+wd0-2
+\backslash
+tabcolsep-.25em}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+contents
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+% 
+\backslash
+def
+\backslash
+sym#1{
+\backslash
+ifmmode^{#1}
+\backslash
+else
+\backslash
+(^{#1}
+\backslash
+)
+\backslash
+fi}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+% 
+\backslash
+begin{adjustbox}{max
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+% width={.96
+\backslash
+textwidth},caption={Income and Occupation},nofloat=table}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+% 
+\backslash
+begin{tabular}{l*{2}{c}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+% 
+\backslash
+toprule
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+% & Monthly Income & 
+\backslash
+shortstack{Agricultural
+\backslash
+
+\backslash
+Occupation (=1)} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+% & (1) & (2) 
+\backslash
+
+\backslash
+ 
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+% 
+\backslash
+textbf{
+\backslash
+emph{Instrumental Variables}}&                  &                  
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+% Hours of electricity&   0.0015         &   -0.035         
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%                 & (0.0035)         &  (0.030)         
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+% 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+% 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+% 
+\backslash
+textbf{
+\backslash
+emph{Reduced Form}}&                  &                  
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+% Subsidy treatment village (=1)&   0.0018         &   -0.033
+\backslash
+sym{*}  
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%                 & (0.0031)         &  (0.019)         
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+% No subsidy treatment village (=1)&   0.0063
+\backslash
+sym{*}  &    0.038
+\backslash
+sym{*}  
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%                 & (0.0033)         &  (0.020)         
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%                 
+\backslash
+addlinespace
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+% Baseline Controls &      Yes         &      Yes         
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%                
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+% Control mean           &    0.075         &     0.32         
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+% Observations    &     2692         &     2868         
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+% 
+\backslash
+bottomrule
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+% 
+\backslash
+multicolumn{3}{p{
+\backslash
+textwidth}}{
+\backslash
+footnotesize Includes baseline electricity source indicators, baseline monthly income, and baseline equivalent of outcome variable controls. Standard errors clustered at the village level in parentheses.}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+% 
+\backslash
+multicolumn{3}{p{
+\backslash
+textwidth}}{
+\backslash
+footnotesize 
+\backslash
+sym{*} 
+\backslash
+(p<0.10
+\backslash
+), 
+\backslash
+sym{**} 
+\backslash
+(p<0.05
+\backslash
+), 
+\backslash
+sym{***} 
+\backslash
+(p<0.01
+\backslash
+)}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+% 
+\backslash
+end{tabular}
+\backslash
+end{adjustbox}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

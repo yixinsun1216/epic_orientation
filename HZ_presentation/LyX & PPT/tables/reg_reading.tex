@@ -1,0 +1,41 @@
+\begin{table}[htbp]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Endline household average reading test level, 0-4}
+\begin{tabular*}{1\hsize}{@{\hskip\tabcolsep\extracolsep\fill}l*{6}{c}}
+\toprule
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         \\
+\midrule
+Subsidy group   &     0.23\sym{*}  &    0.078         &    0.097         &    0.096         &     0.12         &     0.11         \\
+                &   (0.13)         &   (0.12)         &   (0.12)         &   (0.12)         &   (0.12)         &   (0.14)         \\
+Normal group    &     0.16         &    0.079         &    0.073         &    0.068         &    0.058         &    0.073         \\
+                &   (0.12)         &   (0.10)         &   (0.10)         &   (0.11)         &   (0.11)         &   (0.11)         \\
+Exposure*Subsidy group&    0.018         &    0.025\sym{**} &    0.024\sym{*}  &    0.024\sym{*}  &    0.022\sym{*}  &    0.023\sym{*}  \\
+                &  (0.013)         &  (0.012)         &  (0.012)         &  (0.012)         &  (0.012)         &  (0.013)         \\
+Exposure*Normal group&   -0.013         &   -0.014         &   -0.015         &   -0.015         &   -0.015         &   -0.015         \\
+                &  (0.043)         &  (0.038)         &  (0.039)         &  (0.040)         &  (0.043)         &  (0.040)         \\
+household average reading level&                  &     0.50\sym{***}&     0.50\sym{***}&     0.50\sym{***}&     0.51\sym{***}&     0.50\sym{***}\\
+                &                  &  (0.035)         &  (0.036)         &  (0.037)         &  (0.037)         &  (0.037)         \\
+Monthly income 100,000s&                  &                  &     0.16         &     0.15         &     0.16         &     0.15         \\
+                &                  &                  &   (0.14)         &   (0.14)         &   (0.14)         &   (0.14)         \\
+Baseline any electricity&                  &                  &                  &     0.10         &                  &     0.10         \\
+                &                  &                  &                  &   (0.10)         &                  &   (0.10)         \\
+Baseline gov. electricity&                  &                  &                  &                  &    0.066         &                  \\
+                &                  &                  &                  &                  &   (0.22)         &                  \\
+Baseline HPS biomass&                  &                  &                  &                  &     0.74\sym{***}&                  \\
+                &                  &                  &                  &                  &   (0.24)         &                  \\
+Baseline HPS solar&                  &                  &                  &                  &   -0.028         &                  \\
+                &                  &                  &                  &                  &   (0.51)         &                  \\
+Baseline diesel generator&                  &                  &                  &                  &     0.24\sym{*}  &                  \\
+                &                  &                  &                  &                  &   (0.12)         &                  \\
+Baseline own/share solar&                  &                  &                  &                  &    -0.34\sym{*}  &                  \\
+                &                  &                  &                  &                  &   (0.18)         &                  \\
+Baseline village gov. elec&                  &                  &                  &                  &                  &   -0.053         \\
+                &                  &                  &                  &                  &                  &   (0.15)         \\
+\midrule
+cmean           &                  &                  &                  &                  &                  &     1.63         \\
+\bottomrule
+\multicolumn{7}{l}{\footnotesize Marginal effects; Standard errors in parentheses}\\
+\multicolumn{7}{l}{\footnotesize  (d) for discrete change of dummy variable from 0 to 1}\\
+\multicolumn{7}{l}{\footnotesize \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular*}
+\end{table}
