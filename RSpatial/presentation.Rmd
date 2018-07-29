@@ -1,0 +1,152 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+
+```{r setup}
+library(sf)
+library(dplyr)
+library(readr)
+library(ggplot2)
+library(mapview)
+library(raster)
+
+ddir <- "C:/Users/Yixin Sun/Documents/Dropbox/Recruiting/2018 Recruiting/epic_orientation/data/Spatial_Exercise"
+```
+
+# Converting CSV to `sf` Object
+
+```{r concert csv}
+utm_crs <- 27700
+
+# load data in and get rid of spaces in column names
+streetCrime <- 
+  read_csv(file.path(ddir, "2012-03-cumbria-street.csv")) %>%
+  rename(Report_by = `Reported by`, 
+         Falls_within = `Falls within`, 
+         Crime_type = `Crime type`)
+glimpse(streetCrime)
+
+streetCrime <-
+  streetCrime %>%
+  st_as_sf(coords = c("Easting", "Northing"), crs = utm_crs)
+
+head(streetCrime)
+
+```
+
+# Exploratory Plotting
+```{r plotting options}
+plot(streetCrime$geometry)
+
+mapview(streetCrime, map.types = ) # REMEMBER TO LOOK UP MAP.TYPES WHEN THERE'S INTERNET
+
+# `sf` recently became compatible with ggplot2
+streetCrime %>%
+  ggplot() + 
+  geom_sf(aes(colour = Crime_type)) + 
+  ggtitle("Street Crime By Type") + 
+  theme_minimal()
+
+```
+## SHOULD WE DO MAPPING OF RELATIVE RATES??
+
+# Police Neighbourhood Areas
+UK Crime is organized by neighborhoods. Here, we read in the shapefile of the neighborhoods and aggregate the point data to the neighborhood level. 
+Important to note that the neighborhood polygons are in longitude/latitude while the crime data is in UTM, so we must first convert the data to the same CRS
+
+```{r convert csv}
+nh <- 
+  file.path(ddir, "neighbourhoods.shp") %>%
+  st_read(stringsAsFactors = F) %>%
+  st_transform(utm_crs)
+  
+nh %>%
+  ggplot() + 
+  geom_sf() +
+  geom_sf(data = streetCrime) + 
+  ggtitle("Neighbourhood Polygons") + 
+  theme_minimal()
+
+# Join crime data to neighbourhood polyogns
+# aggregate total crime in each neighbourhood 
+nh_crime <-
+  nh %>%
+  st_join(streetCrime) %>% 
+  group_by(ID, Name, Population) %>%
+  summarise(total_crimes = n()) %>%
+  mutate(crime_per_capita = total_crimes / Population)
+
+# plot chloropleth map - ARRANGE 2 PLOTS SIDE BY SIDE FOR LEVELS AND THEN PER CAPITA
+nh_crime %>%
+  ggplot() +
+  geom_sf(aes(fill = crime_per_capita)) + 
+  theme_minimal() + 
+  ggtitle("Crime in Neighbourhoods")
+
+```
+
+# Land Use Raster Data
+Some neighbourhoods are clearly more rural than others. Therefore, it might be useful to visualize the land types the analysis region. Here, we learn how to read in and extract information from a raster file. 
+
+Raster files store information for each pixel. In this case, we have a land use classification at each pixel level. What we want to do is for each neighbourhood polygon, count up the number of pixels in that polgon that fall within each land use classification.
+
+```{r}
+# read in legend for land use raster file
+legend <- 
+  file.path(ddir, "legend.csv") %>%
+  read_csv()
+head(legend)
+
+# read in raster file
+landUse <- raster(file.path(ddir, "cumbriaLandUse.tif"))
+plot(landUse)
+
+# function for counting up land use classification in a polygon
+# then return the classification that had the highest area coverage
+lc_extract <- function(p){
+  lc_temp <- 
+    as_tibble(p) %>%
+    left_join(legend, by = c("value" = "GRID_CODE")) %>%
+    group_by(LABEL2) %>%
+    summarise(n = n()) %>%
+    arrange(-n) %>%
+    filter(!is.na(n), 
+           row_number() == 1) %>%
+    dplyr::select(Classification = LABEL2)
+
+  return(lc_temp)
+}
+
+# note that extract currently only works with `sp` objects, so we first 
+# transform nh to an `sp` object
+nh_sp <- as(nh, "Spatial")
+lu_crime <- 
+  extract(landUse, as(nh, "Spatial")) %>%
+  map_df(lc_extract) %>%
+  bind_cols(., nh_crime)
+
+lu_crime %>%
+  ggplot() +
+  geom_sf(aes(fill = Classification)) + 
+  theme_minimal() + 
+  ggtitle("Top Land Use of Neighbourhoods")
+
+```
+
+
+# Crimes and Roads
+Here we are interested in whether crimes are close to major roads, or if there are specific crimes that usually happen near roads. We load in road data, and find distance of crimes to roads. 
+
+
+```{r crime and roads}
+roads <- 
+  file.path(ddir, "mainroads.shp") %>%
+  st_read(stringsAsFactors = F) 
+
+```
+
