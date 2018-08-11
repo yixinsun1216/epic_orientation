@@ -13,12 +13,11 @@ library(dplyr)
 library(readr)
 library(ggplot2)
 library(mapview)
-library(raster)
 library(lubridate)
-library(gridExtra)
+Sys.setenv(RSTUDIO_PANDOC="C:/Program Files/RStudio/bin/pandoc")
 
 # set directory from which we read in data
-ddir <- "C:/Users/Yixin Sun/Documents/Dropbox/Recruiting/2018 Recruiting/epic_orientation/data/Spatial_crime"
+ddir <- "C:/Users/Yixin Sun/Documents/Dropbox/EPIC Predoc Resources/epic_orientation/data/Spatial_crime"
 
 # function that creates custom map style for ggplot
 theme_nothing <- function(base_size = 12, title_size = 15){
@@ -93,14 +92,18 @@ nh <-
   st_read(stringsAsFactors = F) %>%
   st_transform(utm_crs)
   
-# plot the polygons
+# plot the polygons with points on top
 nh %>%
   ggplot() + 
   geom_sf() +
   geom_sf(data = streetCrime) + 
   ggtitle("Neighbourhood Polygons") + 
   theme_nothing()
+```
 
+This plain map is not visually appealing, and besides seeing that some parts have more concentrated dots than others, it's not very informative either. Let's instead color the neighbourhoods by the number of crimes in each region and create a chloropleth map. 
+
+```{r neighbourhood crime}
 
 # Join crime data to neighbourhood polyogns
 # aggregate total crime in each neighbourhood 
@@ -119,7 +122,7 @@ per_capita_map <-
   geom_sf(aes(fill = crime_per_capita)) + 
   theme_nothing() + 
   scale_fill_continuous(low = "#fee0d2", high = "#67000d") +
-  ggtitle("Crime in Per Capita")
+  ggtitle("Per Capita Crime")
 
 tot_crime_map <-
   nh_crime %>%
@@ -130,6 +133,7 @@ tot_crime_map <-
   ggtitle("Crime in Neighbourhoods")
 
 # use gridExtra package to print maps side by side
+library(gridExtra)
 grid.arrange(tot_crime_map, per_capita_map, ncol = 2)
 
 ```
@@ -143,7 +147,7 @@ log_per_capita_map <-
   geom_sf(aes(fill = log(crime_per_capita))) + 
   theme_nothing() + 
   scale_fill_continuous(low = "#fee0d2", high = "#67000d") +
-  ggtitle("Log Crime in Neighbourhoods per Capita")
+  ggtitle("Log Crime per Capita")
 
 log_tot_crime_map <-
   nh_crime %>%
@@ -151,7 +155,7 @@ log_tot_crime_map <-
   geom_sf(aes(fill = log(total_crimes))) + 
   theme_nothing() + 
   scale_fill_continuous(low = "#fee0d2", high = "#67000d") +
-  ggtitle("Log Crime in Neighbourhoods")
+  ggtitle("Log Crime")
 
 # use gridExtra package to print maps side by side
 grid.arrange(log_tot_crime_map, log_per_capita_map, ncol = 2)
@@ -166,9 +170,11 @@ Raster files store information for each pixel. In this case, we have a land use 
 To do this we use 3 files 
 * raster file, for which each pixel is classified using a number, 
 * raster legend file which is a dictionary mapping the numbers to a type of land use classification
-* neighbourhood polygon file which we want to overlay onto the raster file and count up the nubmer of pixels in that polygon that for each classification
+* neighbourhood polygon file which we want to overlay onto the raster file and count up the number of pixels in that polygon that for each classification
 
 ```{r land use file}
+library(raster)
+
 # read in legend for land use raster file
 legend <- 
   file.path(ddir, "legend.csv") %>%
@@ -179,43 +185,56 @@ head(legend)
 landUse <- raster(file.path(ddir, "cumbriaLandUse.tif"))
 plot(landUse)
 
+```
+
+```{r extract all}
 # the extract() function from the raster package extract values of the pixel of a raster object that is covered by a polygon. Let's look at this with 1 polygon
 # note that extract currently only works with `sp` objects, so we first 
 # transform nh to an `sp` object
 nh_sp <- as(nh, "Spatial")
 extract(landUse, nh_sp[1,])
 
-# function for counting up land use classification in a polygon
-# then return the classification that had the highest area coverage
-lc_extract <- function(p){
+# extract highest classification type for all polygons
+lu_extracted <- extract(landUse, nh_sp)
+
+# function for counting up land use classification in a polygon,
+# and returns the fraction of pixels in each classification
+lc_extract <- function(p, id){
   lc_temp <- 
     as_tibble(p) %>%
     filter(value != 0) %>%
     left_join(legend, by = c("value" = "GRID_CODE")) %>%
-    group_by(LABEL2) %>%
+    group_by(Classification = LABEL2) %>%
     summarise(n = n()) %>%
-    arrange(-n) %>%
-    filter(row_number() == 1) %>%
-    dplyr::select(Classification = LABEL2) %>%
-    ungroup
+    mutate(ID = id, 
+           perc_covered = n / sum(n)) 
 
   return(lc_temp)
 }
 
-# extracting highest classification type for each polygon
+# use the functional programming package instead of apply family
+# shape the list of classifications into percent of polygon area covered
 library(purrr) # use the functional programming package instead of apply family
+lu_classified <- map2_df(lu_extracted, nh$ID, lc_extract)
+
+# for our broad classification, we take the classification with the most number
+# of pixels
 lu_crime <- 
-  extract(landUse, nh_sp) %>%
-  map_df(lc_extract) %>%
-  bind_cols(nh_crime, .)
+  lu_classified %>%
+  group_by(ID) %>%
+  arrange(-perc_covered) %>%
+  filter(row_number() == 1) %>%
+  right_join(nh_crime)
+
 
 # map land use
 lu_crime %>%
   ggplot() +
   geom_sf(aes(fill = Classification)) + 
   theme_nothing() + 
-  ggtitle("Land Use of Neighbourhoods") 
-
+  theme(legend.position = "bottom") +
+  ggtitle("Land Use of Neighbourhoods") +
+  guides(fill = guide_legend(nrow=2))
 
 lu_crime %>%
   ggplot() +
@@ -226,12 +245,11 @@ lu_crime %>%
   theme(legend.position = "none")
 
 
-
 ```
 
 
 # Crimes and Roads
-Here we are interested in whether crimes are close to major roads, or if there are specific crimes that usually happen near roads. We load in road data, and find distance of crimes to roads. 
+Here we are interested in whether crimes are close to major roads, or if there are specific crimes that usually happen near roads. We load in road data, and find distance of crimes to roads. Let's plot the density and cumulative distribution of distances for violent , burglary, and shoplifting crimes.
 
 
 ```{r crime and roads}
@@ -255,10 +273,23 @@ streetCrime$dRoad <-
 
 
 streetCrime %>%
-  ggplot(aes(x = Crime_type, y = dRoad))
+  filter(Crime_type %in% c("Violent crime", "Burglary", 
+                           "Shoplifting")) %>%
+  ggplot() +
+  geom_density(aes(dRoad, group = Crime_type, colour = Crime_type)) +
+  theme_minimal()
+
+streetCrime %>%
+  filter(Crime_type %in% c("Violent crime", "Burglary", 
+                           "Shoplifting")) %>%
+  ggplot() +
+  stat_ecdf(aes(dRoad, group = Crime_type, colour = Crime_type)) +
+  theme_minimal()
 
 
 ```
+
+
 
 # Crime over Time
 We also have a data file of the crime counts in neighbourhoods for a number of month. The file has one for each month for each neighbourhood, and lists the number of crimes in each category. Here, we first join this with the neighbourhoods polygons and create some time series plots
@@ -307,27 +338,25 @@ nh_all %>%
 
 # Represent Data as GIF
 
+A fun option is to represent your data as a GIF! The main package for this is `animations`, although I often use `gganimate` which is a simple extension on the `ggplot2` package. 
+`
 ```{r gganimate}
 library(gganimate)
 
-crime_gif <-
-  nh_all %>%
-  ggplot(aes(fill = `All crime and ASB`, frame = Month)) +
+nh_all %>%
+  mutate(Month = format(as.Date(nh_all$Month), "%Y-%m"))  %>%
+  ggplot(aes(fill = log(`All crime and ASB`))) +
+  geom_sf() +
   scale_fill_continuous(low = "#fff5f0", high = "#67000d") +
   theme_nothing() + 
-  theme(legend.position = "bottom")
-
-  gganimate(crime_gif, interval = 1.5,
-            filename = file.path(ddir, "crime.gif"),
-            ani.width = 1000, ani.height = 500)
+  theme(legend.position = "bottom") + 
+  labs(title = "{closest_state}") +
+  transition_states(Month, 1, 1) 
 
 ```
-
 
 
 # Exercises
 1. Go to the folder `Spatial_palo_alto`, read in the `palo_alto` and `palo_alto_freeway` shapefiles. Plot both layers onto one map
 2. Make chloropleth map of the average per capita income, `PrCpInc`. Also overlay freeway layer on top
-3. Using the demographic data in `palo_alto`, make some maps to show patterns of freeway layouts and segregation
-3. 
-2. 
+3. Using the demographic data in `palo_alto`, make some maps to show patterns of freeway layouts and different demographics. Do any patterns emerge here?
