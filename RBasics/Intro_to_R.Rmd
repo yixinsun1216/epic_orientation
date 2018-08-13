@@ -1,0 +1,211 @@
+---
+title: "EPIC Orientation 2018: Introduction to R"
+date: "Updated: `r format(Sys.Date(), format = '%d %B %Y')`" 
+output:
+  html_document:
+    theme: readable
+    highlight: zenburn
+html_notebook: default
+github_document: default
+number_sections: true
+---
+
+
+http://genomicsclass.github.io/book/pages/dplyr_tutorial.html
+
+## Overview
+1. Importing data
+2. R Data Types
+3. Working with dataframes
+4. Data Manipulation with dplyr 
+5. Data Visualization using ggplot2
+
+## 1. Importing data
+For starters, we will be working with `tv_hurricanes_by_network.csv`, which contains the share of TV news that mention Hurricanes Harvey, Irma, Jose, and Maria each day.
+
+Source: https://github.com/fivethirtyeight/data/tree/master/puerto-rico-media
+
+Let's get started.
+```{r}
+#get current working directory
+wd <- getwd() 
+
+#to get help for a function
+help("read.csv")
+
+#import csv
+df <- read.csv("datasets/tv_hurricanes_by_network.csv")
+```
+
+R also has the capability to import other file formats including Stata, SPSS, SAS and Excel files using functions such as read.spss(), read.dta(), and read.xport(). You may wish to explore the `foreign` package to find out more. 
+
+## 2. R Data Types
+
+You will encounter a variety of data types in R:
+
+* ####scalar 
+    + a single number (e.g. 3)
+* ####vector
+    + numeric <-  c(0.1, 2.2. 4.678)
+    + integer <- c(5, 10, 100)
+    + character <- c("EPIC", "is", "epic!")
+    + logical <- c(T, F, T, T)
+    + factor <- c(1,2,3,4)
+* ####matrices
+    + all columns in a matrix must be of the same type (numeric, character, etc.) and the same length.
+* ####dataframe
+    + more general than a matrix, different columns can have different modes (numeric, character, factor, etc.)
+* ####list
+    + an ordered collection of objects (components), a list allows you to gather (possibly unrelated) objects under one name (e.g. a        string, a numeric vector, a matrix, and a scalar)  e.g. mylist <- list("Hello", c(1,2,5.3,6,-2,4), matrix(1:20, nrow=5,ncol=4), 9)
+    + you can also make lists of lists e.g. mylist <- list(list1, list2, list3)
+
+Let's examine our data.
+
+```{r}
+#see structure of object
+str(df)
+```
+
+```{r}
+#see class of a variable
+class(df$Query)
+```
+
+R is currently treating the Query variable as nominal, let's change it to a character type.
+```{r}
+#change Query variable to a character type
+df$Query <- as.character(df$Query) 
+#see structure
+str(df)
+```
+
+## 3. Working with Dataframes
+Sometimes we deal with large dataframes and we don't always get the luxury of viewing it in its entirety. Instead, we can use the following functions:
+```{r}
+#see dimensions (in this order: row, column)
+dim(df)
+#view the first 2 obs
+head(df, 2)
+#view the last 3 obs
+tail(df, 3)
+#summary statistics
+summary(df)
+```
+
+To access specific columns or rows by name or index:
+```{r}
+#Get the 2nd observation of the Query Variable
+df[2, 'Query'] #Method 1
+df$Query[2] #Method 2
+#Get the 3rd observation of the 5th variable
+df[3,5]
+#Grab multiple elements (from the 1st & 2nd rows, 4th & 5th columns)
+df[c(1,2), c(4,5)]
+```
+
+
+You can also perform functions or use operators on vectors
+```{r}
+#Find the minimum value of CNN
+min(df$CNN) 
+#Sum of all obs in BBC.News
+sum(df$BBC.News)
+#Standard deviation of Fox News
+sd(df$FOX.News)
+#Multiple CNN by 2
+df$CNN.times.2 <- df$CNN*2
+#Remove this newly created column
+df$CNN.times.2 <- NULL
+#Add variables together
+df$CNN.plus.BBC <- df$CNN + df$BBC.News
+#Convert Date variable from Factor to Date format
+df$Date <- as.Date(df$Date, format = "%m/%d/%y")
+#Tabulate the Query variable, how many observations are Hurricane Irma?
+table(df$Query)
+```
+
+There are several ways to rename a column. For instance, if we'd like to rename the "Query"" column to "Hurricane"
+```{r}
+#view all variable names in df
+names(df)
+#Method 1: rename the second variable, aka Query
+names(df)[2] <- "HURRICANE" #Method 1
+#Method 2: rename based on the name
+names(df)[names(df)=="HURRICANE"] <- "Hurricane"
+#view all variable names in df again
+names(df)
+```
+
+####Challenge 1: 
+Create a numeric variable that assigns the following damage costs to each of the hurricanes. Name this variable `Costs` and use millions as the unit. 
+
+* Harvey: $125Bn
+* Maria: $90Bn
+* Irma: $64.8Bn
+* Jose: $2.8M
+
+#####*“If you look for it, I've got a sneaky feeling you'll find that love actually is all around.” - Prime Minister David (Hugh Grant)*
+
+```{r}
+df$Costs[df$Hurricane=="Hurricane Harvey"] <- 125 * 1000
+df$Costs[df$Hurricane=="Hurricane Irma"] <- 64.8 * 1000
+df$Costs[df$Hurricane=="Hurricane Maria"] <- 90 * 1000
+df$Costs[df$Hurricane=="Hurricane Jose"] <- 2.8
+```
+
+#4. Data Manipulation with dplyr 
+
+####What's dplyr?
+dplyr is a powerful package written and maintained by Hadley Wickham. It provides some great, easy-to-use functions for data analysis and manipulation.
+
+```{r}
+#install package
+#install.packages("dplyr")
+#load this package in your R environment
+library(dplyr)
+```
+
+
+### Online News Data
+
+Data about Online News was collected using the [Media Cloud](https://mediacloud.org/) dashboard, an open source suite of tools for analyzing a database of online news.
+
+* `mediacloud_hurricanes.csv` contains the number of sentences per day that mention Hurricanes Harvey, Irma, Jose, and Maria in online news.
+* `mediacloud_states.csv` **(Updated through 10/10/2017)** contains the number of sentences per day that mention Puerto Rico, Texas, and Florida in online news.
+* `mediacloud_trump.csv` **(Updated through 10/10/2017)** contains the number of headlines that mention Puerto Rico, Texas, and Florida, as well as headlines that mention those three locations along with 'President' or 'Trump'.
+* `mediacloud_top_online_news.csv` contains a list of sources included in Media Cloud's "U.S. Top Online News" collection.
+
+
+### TV News Data
+
+TV News Data was collected from the [Internet TV News Archive](https://archive.org/details/tv) using the [Television Explorer](https://television.gdeltproject.org/cgi-bin/iatv_ftxtsearch/iatv_ftxtsearch) tool. 
+
+* `tv_hurricanes.csv` - contains the percent of sentences per day in TV News that mention Hurricanes Harvey, Irma, Jose, and Maria.
+* `tv_hurricanes_by_network.csv` - contains the percent of sentences per day in TV News per network that mention Hurricanes Harvey, Irma, Jose, and Maria.
+* `tv_states.csv` **(Updated through 10/10/2017)** - contains the percent of sentences per day in TV News that mention Puerto Rico, Texas, and Florida.
+
+### Google Search Queries
+
+Google search data was collected using the [Google Trends](https://trends.google.com/trends/) dashboard.
+
+* `google_trends.csv` - Contains data on google trend searches for Hurricanes Harvey, Irma, Jose, and Maria.
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+```{r}
+plot(cars)
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+
+```{r}
+
+```
+
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file).
+
+Further Resources
+https://github.com/yixinsun1216/covertoperations_manual/wiki/R-Guide
