@@ -5,8 +5,7 @@ output:
   html_document:
     theme: readable
     highlight: zenburn
-html_notebook: default
-github_document: default
+github_document: cerulean
 number_sections: true
 ---
 
