@@ -3,7 +3,7 @@ title: "EPIC Orientation 2018: Introduction to R"
 date: "Updated: `r format(Sys.Date(), format = '%d %B %Y')`" 
 output:
   html_document:
-    theme: readable
+    theme: default
     highlight: zenburn
   md_document: default
   variant: markdown_github
@@ -46,19 +46,19 @@ R also has the capability to import other file formats including Stata, SPSS, SA
 
 You will encounter a variety of data types in R:
 
-* ####scalar 
+* #### scalar 
     + a single number (e.g. 3)
-* ####vector
+* #### vector
     + `numeric <- c(0.1, 2.2. 4.678)`
     + `integer <- c(5, 10, 100)`
     + `character <- c("EPIC", "is", "epic!")`
     + `logical <- c(T, F, T, T)`
     + `factor <- c(1,2,3,4)`
-* ####matrices
+* #### matrices
     + all columns in a matrix must be of the same type (numeric, character, etc.) and the same length.
-* ####dataframe
+* #### dataframe
     + more general than a matrix, different columns can have different modes (numeric, character, factor, etc.)
-* ####list
+* #### list
     + an ordered collection of objects (components), a list allows you to gather (possibly unrelated) objects under one name (e.g. a        string, a numeric vector, a matrix, and a scalar)  e.g. `mylist <- list("Hello", c(1,2,5.3,6,-2,4), matrix(1:20, nrow=5,ncol=4), 9)`
     + you can also make lists of lists e.g. `mylist <- list(list1, list2, list3)`
 
@@ -140,7 +140,7 @@ names(df)
 #Method 3: use rename() from the dplyr package which we will cover later
 ```
 
-###Quiz 1: 
+### Quiz 1: 
 Create a numeric variable that assigns the following damage costs to each of the hurricanes. Name this variable `Costs` and use millions as the unit. 
 
 * Harvey: $125Bn
@@ -148,7 +148,7 @@ Create a numeric variable that assigns the following damage costs to each of the
 * Irma: $64.8Bn
 * Jose: $2.8M
 
-#####*“If you look for it, I've got a sneaky feeling you'll find that love actually is all around.” - Prime Minister David (Hugh Grant)*
+##### *“If you look for it, I've got a sneaky feeling you'll find that love actually is all around.” - Prime Minister David (Hugh Grant)*
 
 ```{r}
 df$Costs[df$Hurricane=="Hurricane Harvey"] <- 125 * 1000
@@ -157,9 +157,9 @@ df$Costs[df$Hurricane=="Hurricane Maria"] <- 90 * 1000
 df$Costs[df$Hurricane=="Hurricane Jose"] <- 2.8
 ```
 
-#4. Data Manipulation with dplyr 
+## 4. Data Manipulation with dplyr 
 
-####What's dplyr?
+#### What's dplyr?
 dplyr is a powerful package written by the amazing Hadley Wickham. It provides some easy-to-use functions for data analysis and manipulation.
 
 ```{r}
@@ -220,7 +220,7 @@ df %>%
   summarise(mean.coverage = mean(CNN))
 ```
 
-####What is this `%>%` symbol?
+#### What is this `%>%` symbol?
 This is known as a **pipe operator**, which allows you to pipe the output from one function to the input of another function. This saves you from long, nested operations or doing a bunch of assignments. 
 
 Without the pipe operator, you could also execute the previous script with a long, nested operation (too confusing):
@@ -234,7 +234,7 @@ test <- group_by(df, Hurricane)
 test <- summarise(test, mean.coverage = mean(CNN))
 ```
 
-###Quiz 2: 
+### Quiz 2: 
 Using a combination of the functions we've covered, find out the average coverage of MSNBC for each hurricane, only include hurricanes where damage costs were above 10 million. Remember to use the pipe operator :D
 
 ```{r}
@@ -251,9 +251,9 @@ Just to make a point, if you **didn't** use the pipe operator, a nested operatio
 arrange(summarise(group_by(filter(df, Costs > 10), Hurricane), max.coverage = max(MSNBC)), max.coverage)
 ```
 
-#5. Reshaping data with tidyr 
+## 5. Reshaping data with tidyr 
 
-####What's tidyr?
+#### What's tidyr?
 The most commonly used functions in this package are `gather()` and `spread()`, which help us reshape our data. Our data currently has 4 separate columns for news coverage, one for each TV station. What if we wanted to restructure our data from a **wide to long** format, so the data of all 4 TV stations can be in a single variable?
 
 ```{r}
@@ -272,7 +272,7 @@ plot_df <- gather(df,
 head(spread(plot_df, tv.station, coverage), 3)
 ```
 
-#6. Data visualization with ggplot2 
+## 6. Data visualization with ggplot2 
 The `ggplot2` package is based on the **grammar of graphics**, the idea that you can build every graph from the same few components: a data set, a set of geoms (data points), and a coordinate system.
 
 ```{r}
