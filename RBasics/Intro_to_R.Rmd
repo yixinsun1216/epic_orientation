@@ -5,29 +5,33 @@ output:
   html_document:
     theme: readable
     highlight: zenburn
-github_document: cerulean
+  md_document: default
+  variant: markdown_github
+github_document: default
 number_sections: true
 ---
 
-
-http://genomicsclass.github.io/book/pages/dplyr_tutorial.html
 
 ## Overview
 1. Importing data
 2. R Data Types
 3. Working with dataframes
 4. Data Manipulation with dplyr 
-5. Data Visualization using ggplot2
+5. Reshaping data with tidyr
+6. Data Visualization using ggplot2
 
 ## 1. Importing data
-For starters, we will be working with `tv_hurricanes_by_network.csv`, which contains the share of TV news that mention Hurricanes Harvey, Irma, Jose, and Maria each day.
+For starters, we will be working with `tv_hurricanes_by_network.csv`, which contains the percentage of TV news that mention Hurricanes Harvey, Irma, Jose, and Maria each day.
 
 Source: https://github.com/fivethirtyeight/data/tree/master/puerto-rico-media
 
 Let's get started.
 ```{r}
-#get current working directory
-wd <- getwd() 
+#clean environment
+rm(list = ls())
+
+#to get current working directory
+getwd() 
 
 #to get help for a function
 help("read.csv")
@@ -36,7 +40,7 @@ help("read.csv")
 df <- read.csv("datasets/tv_hurricanes_by_network.csv")
 ```
 
-R also has the capability to import other file formats including Stata, SPSS, SAS and Excel files using functions such as read.spss(), read.dta(), and read.xport(). You may wish to explore the `foreign` package to find out more. 
+R also has the capability to import other file formats including Stata, SPSS, SAS and Excel files using functions such as `read.spss()`, `read.dta()`, and `read.xport()`. You may wish to explore the `foreign` package to find out more. 
 
 ## 2. R Data Types
 
@@ -45,18 +49,18 @@ You will encounter a variety of data types in R:
 * ####scalar 
     + a single number (e.g. 3)
 * ####vector
-    + numeric <-  c(0.1, 2.2. 4.678)
-    + integer <- c(5, 10, 100)
-    + character <- c("EPIC", "is", "epic!")
-    + logical <- c(T, F, T, T)
-    + factor <- c(1,2,3,4)
+    + `numeric <- c(0.1, 2.2. 4.678)`
+    + `integer <- c(5, 10, 100)`
+    + `character <- c("EPIC", "is", "epic!")`
+    + `logical <- c(T, F, T, T)`
+    + `factor <- c(1,2,3,4)`
 * ####matrices
     + all columns in a matrix must be of the same type (numeric, character, etc.) and the same length.
 * ####dataframe
     + more general than a matrix, different columns can have different modes (numeric, character, factor, etc.)
 * ####list
-    + an ordered collection of objects (components), a list allows you to gather (possibly unrelated) objects under one name (e.g. a        string, a numeric vector, a matrix, and a scalar)  e.g. mylist <- list("Hello", c(1,2,5.3,6,-2,4), matrix(1:20, nrow=5,ncol=4), 9)
-    + you can also make lists of lists e.g. mylist <- list(list1, list2, list3)
+    + an ordered collection of objects (components), a list allows you to gather (possibly unrelated) objects under one name (e.g. a        string, a numeric vector, a matrix, and a scalar)  e.g. `mylist <- list("Hello", c(1,2,5.3,6,-2,4), matrix(1:20, nrow=5,ncol=4), 9)`
+    + you can also make lists of lists e.g. `mylist <- list(list1, list2, list3)`
 
 Let's examine our data.
 
@@ -133,9 +137,10 @@ names(df)[2] <- "HURRICANE" #Method 1
 names(df)[names(df)=="HURRICANE"] <- "Hurricane"
 #view all variable names in df again
 names(df)
+#Method 3: use rename() from the dplyr package which we will cover later
 ```
 
-####Challenge 1: 
+###Quiz 1: 
 Create a numeric variable that assigns the following damage costs to each of the hurricanes. Name this variable `Costs` and use millions as the unit. 
 
 * Harvey: $125Bn
@@ -155,7 +160,7 @@ df$Costs[df$Hurricane=="Hurricane Jose"] <- 2.8
 #4. Data Manipulation with dplyr 
 
 ####What's dplyr?
-dplyr is a powerful package written and maintained by Hadley Wickham. It provides some great, easy-to-use functions for data analysis and manipulation.
+dplyr is a powerful package written by the amazing Hadley Wickham. It provides some easy-to-use functions for data analysis and manipulation.
 
 ```{r}
 #install package
@@ -164,47 +169,185 @@ dplyr is a powerful package written and maintained by Hadley Wickham. It provide
 library(dplyr)
 ```
 
+Now let's try out some of the most commonly-used functions.
 
-### Online News Data
+* `select()` - select specific columns 
+* `mutate()` - create a new column
+* `rename()` - rename columns 
+* `filter()` - select rows using a criteria
+* `arrange()` - arrange rows
+* `group_by()` - group data
+* `summarise()` - summarize values
 
-Data about Online News was collected using the [Media Cloud](https://mediacloud.org/) dashboard, an open source suite of tools for analyzing a database of online news.
-
-* `mediacloud_hurricanes.csv` contains the number of sentences per day that mention Hurricanes Harvey, Irma, Jose, and Maria in online news.
-* `mediacloud_states.csv` **(Updated through 10/10/2017)** contains the number of sentences per day that mention Puerto Rico, Texas, and Florida in online news.
-* `mediacloud_trump.csv` **(Updated through 10/10/2017)** contains the number of headlines that mention Puerto Rico, Texas, and Florida, as well as headlines that mention those three locations along with 'President' or 'Trump'.
-* `mediacloud_top_online_news.csv` contains a list of sources included in Media Cloud's "U.S. Top Online News" collection.
-
-
-### TV News Data
-
-TV News Data was collected from the [Internet TV News Archive](https://archive.org/details/tv) using the [Television Explorer](https://television.gdeltproject.org/cgi-bin/iatv_ftxtsearch/iatv_ftxtsearch) tool. 
-
-* `tv_hurricanes.csv` - contains the percent of sentences per day in TV News that mention Hurricanes Harvey, Irma, Jose, and Maria.
-* `tv_hurricanes_by_network.csv` - contains the percent of sentences per day in TV News per network that mention Hurricanes Harvey, Irma, Jose, and Maria.
-* `tv_states.csv` **(Updated through 10/10/2017)** - contains the percent of sentences per day in TV News that mention Puerto Rico, Texas, and Florida.
-
-### Google Search Queries
-
-Google search data was collected using the [Google Trends](https://trends.google.com/trends/) dashboard.
-
-* `google_trends.csv` - Contains data on google trend searches for Hurricanes Harvey, Irma, Jose, and Maria.
-
-This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
-
-Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+`select()` allows you to select specific columns from your dataframe.
 
 ```{r}
-plot(cars)
+#select just the Date and CNN columns and display the first 3 observations
+#my R is buggy but you should be able to run just this: head(select(df, Date, CNN))
+head(dplyr::select(df, Date, CNN), 3)
 ```
-
-Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+`mutate()` allows you to create new variables
 
 ```{r}
+#create a new column called BBC.and.CNN and display just the first 3 rows
+head(mutate(df, BBC.and.CNN=BBC.News+CNN), 3)
+```
+`rename()` allows you to rename variables.
+```{r}
+#change the variable name BBC.News to just BBC and FOX.News to just FOX
+#again, my R is buggy but you should be able to run just this: head(rename(df, c("BBC.News" = "BBC", "FOX.News" = "FOX")),3)
+head(plyr::rename(df, c("BBC.News" = "BBC", "FOX.News" = "FOX")),3)
+```
+
+`filter()` allows you to select specific observations using conditions
+```{r}
+#find the first 3 observations where CNN has a value of < 0.1 and MSNBC < 0.02
+head(filter(df, CNN < 0.1 & MSNBC < 0.02),3)
+```
+
+`arrange()` allows you to rearrange rows 
+```{r}
+#arrange rows according to Dates (in ascending order), then Hurricane
+head(arrange(df, Date, Hurricane), 3)
+```
+
+`group_by()` uses a **split-apply-combine** concept. To break it down, we want to **split** the dataframe into groups by some variable you've specified, **apply** a function to these groups, and **combine** them again. Let's try this with the `summarise()` function.
+
+```{r}
+#Find out the mean news coverage in CNN by hurricane groups
+df %>%
+  group_by(Hurricane) %>%
+  summarise(mean.coverage = mean(CNN))
+```
+
+####What is this `%>%` symbol?
+This is known as a **pipe operator**, which allows you to pipe the output from one function to the input of another function. This saves you from long, nested operations or doing a bunch of assignments. 
+
+Without the pipe operator, you could also execute the previous script with a long, nested operation (too confusing):
+```{r}
+summarise(group_by(df, Hurricane), mean.coverage = mean(CNN))
+```
+
+Or using multiple assignments (too tedious):
+```{r}
+test <- group_by(df, Hurricane)
+test <- summarise(test, mean.coverage = mean(CNN))
+```
+
+###Quiz 2: 
+Using a combination of the functions we've covered, find out the average coverage of MSNBC for each hurricane, only include hurricanes where damage costs were above 10 million. Remember to use the pipe operator :D
+
+```{r}
+df %>%
+  filter(Costs > 10) %>%
+  group_by(Hurricane) %>%
+  summarise(max.coverage = max(MSNBC)) %>%
+  arrange(max.coverage)
+  
+```
+
+Just to make a point, if you **didn't** use the pipe operator, a nested operation would have looked like this (don't do it).
+```{r}
+arrange(summarise(group_by(filter(df, Costs > 10), Hurricane), max.coverage = max(MSNBC)), max.coverage)
+```
+
+#5. Reshaping data with tidyr 
+
+####What's tidyr?
+The most commonly used functions in this package are `gather()` and `spread()`, which help us reshape our data. Our data currently has 4 separate columns for news coverage, one for each TV station. What if we wanted to restructure our data from a **wide to long** format, so the data of all 4 TV stations can be in a single variable?
+
+```{r}
+#install.packages("tidyr")
+library(tidyr)
+#reshape from wide to long
+plot_df <- gather(df, 
+        key = "tv.station", #name of the new column of 'old columns to be gathered'
+        value = "coverage", #name of the 'gathered values' 
+        BBC.News:MSNBC) #columns to be 'gathered'
+```
+
+`spread()` is the complement of the above. Try it out!
+```{r}
+#reshape from long to wide
+head(spread(plot_df, tv.station, coverage), 3)
+```
+
+#6. Data visualization with ggplot2 
+The `ggplot2` package is based on the **grammar of graphics**, the idea that you can build every graph from the same few components: a data set, a set of geoms (data points), and a coordinate system.
+
+```{r}
+#install.packages ("ggplot2")
+#install.packages ("scales")
+library(ggplot2) 
+library(scales)
+
+#view dataframe for plotting 
+head(plot_df)
+
+#create density plots  
+ggplot(data = plot_df) +
+  geom_density(aes(x = coverage, fill = tv.station), alpha = 0.3) +
+  xlab("news coverage")  #label the x axis
+
+#create a timeseries of news coverage 
+ggplot(data = plot_df) +
+  geom_line(aes(x = as.Date(Date, "%m/%d/%y"), y = coverage, 
+                group = tv.station, 
+                color = tv.station), alpha = 0.7) +
+  xlab("date") + 
+  scale_x_date(labels = date_format("%m/%d"),
+               breaks = date_breaks("1 week")) 
+
+#we could also have separate plots by tv station by using facet_wrap()
+ggplot(data = plot_df) +
+  geom_line(aes(x = as.Date(Date, "%m/%d/%y"), y = coverage, 
+                group = tv.station, 
+                color = tv.station), alpha = 0.5) +
+  facet_wrap(~tv.station, ncol = 4) + 
+  xlab("date") + 
+  scale_x_date(labels = date_format("%m/%d"),
+               breaks = date_breaks("2 weeks")) 
+
+#create histograms of each hurricane in terms of number of observations
+ggplot(data = plot_df) +
+  geom_bar(aes(x = Hurricane, fill = Hurricane), 
+           color = "black",
+           stat = "count", #calculates the number of cases in each group
+           alpha = 0.3) 
+
+#create scatterplot of news coverage against time by TV Station
+ggplot(data = plot_df) +
+  geom_point(aes(y = coverage, x = as.Date(Date, "%m/%d/%y"), color = tv.station),
+             shape = 16,
+             size = 4,
+             alpha = 0.3) + 
+  xlab("date") + 
+  scale_x_date(labels = date_format("%m/%d"),
+               breaks = date_breaks("1 week")) 
+
+```
+
+You may need to overlay plots sometimes, you can do this via layers, remember that they need to share common x and y axes.
+```{r}
+#overlay scatterplot on timeseries lineplot
+ggplot(data = plot_df) +
+  geom_line(aes(x = as.Date(Date, "%m/%d/%y"), y = coverage, 
+                group = tv.station, 
+                color = tv.station), alpha = 0.7) +
+  geom_point(aes(y = coverage, x = as.Date(Date, "%m/%d/%y"), color = tv.station),
+             shape = 16,
+             size = 4,
+             alpha = 0.3) + 
+  xlab("date") + 
+  scale_x_date(labels = date_format("%m/%d"),
+               breaks = date_breaks("1 week")) 
 
 ```
 
 
-When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file).
 
-Further Resources
-https://github.com/yixinsun1216/covertoperations_manual/wiki/R-Guide
+#### Further Resources
+* https://github.com/yixinsun1216/covertoperations_manual/wiki/R-Guide
+* http://genomicsclass.github.io/book/pages/dplyr_tutorial.html
+* https://cran.r-project.org/web/packages/dplyr/vignettes/dplyr.html
+* https://tutorials.iq.harvard.edu/R/Rgraphics/Rgraphics.html
