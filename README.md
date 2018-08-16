@@ -87,3 +87,20 @@ Navigate to your command-line and type:
 Rscript -e 'install.packages(c("tidyverse", "lfe", "sf", "ggplot2"), repos = "https://cran.rstudio.com/")'
 ```
 
+### LaTeX
+
+The LaTeX tutorial itself will be done using Overleaf but software installation is still required to compile pdfs on your local machine. These are just some preferred software from RAs who frequently use LaTeX.
+
+##### Mac OS 
+
+If you have a Mac, a preferred LaTeX software is [TeXShop](https://pages.uoregon.edu/koch/texshop/). 
+
+##### Windows
+
+If you're on a Windows machine, a preferred LaTeX software is [TexMaker](http://www.xm1math.net/texmaker/) which also runs on Mac.
+
+
+
+
+
+
