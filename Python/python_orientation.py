@@ -15,14 +15,15 @@ import datetime as dt
 import getpass
 
 if getpass.getuser()=="nadialucas":
-    dbPath = r"/Users/nadialucas/Dropbox/2018 Recruiting/epic_orientation"
+    dbPath = r"/Users/nadialucas/Dropbox/EPIC Predoc Resources/epic_orientation"
 else:
-	print("wtf")
+	print("please add your machine's directory")
 
 
-#Set directory paths
+# Set directory paths
 dataPath = r"{}/data/Python_R_Puerto_Rico".format(dbPath)
 
+# read in 
 media_trump_filename = r"{}/mediacloud_trump.csv".format(dataPath)
 google_trends_filename = r"{}/google_trends.csv".format(dataPath)
 media_states_filename = r"{}/mediacloud_states.csv".format(dataPath)
@@ -51,13 +52,14 @@ google_trends = google_trends.rename(columns = {'"Hurricane Harvey": (United Sta
 google_trends = google_trends.rename(columns = {'"Hurricane Irma": (United States)': 'Irma_US'})
 google_trends = google_trends.rename(columns = {'"Hurricane Maria": (United States)': 'Maria_US'})
 google_trends = google_trends.rename(columns = {'"Hurricane Jose": (United States)': 'Jose_US'})
-#print(google_trends[1:])
 media_states = media_states.rename(columns = {'"Puerto Rico"': 'Puerto Rico'})
 
 # the dataframe is generally very flexible so in the case we want
 # to plot date objects on the x-axis we can remove dates as a vector
 # and do a list functional
+# pandas is known for its time series functioanlity
 google_trends_dates = google_trends['Day']
+# the following is a list functional
 google_trends_date_objects = [dt.datetime.strptime(d,'%m/%d/%y').date() for d in google_trends_dates]
 
 # then we can plot the x-axis as a date object instead of dealing with a 
@@ -70,7 +72,7 @@ plt.axvline(x=dt.datetime.strptime("8/25/17", '%m/%d/%y').date(), linestyle = 'd
 plt.axvline(x=dt.datetime.strptime("9/10/17", '%m/%d/%y').date(), linestyle = 'dotted')
 plt.legend(loc='best')
 
-#plt.show()
+plt.show()
 
 
 print(media_trump.head())

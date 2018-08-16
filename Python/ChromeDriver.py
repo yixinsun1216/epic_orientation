@@ -63,21 +63,21 @@ class ChromeDriver():
 
         # Downloading data
         print("Downloading Data Files")
-        for i in range(5):
+        for i in range(len(self.files)):
             # Clicking on the download link
             WebDriverWait(self.driver,self.waiting).until(EC.element_to_be_clickable((By.XPATH,"""/html/body/main/div/ol/li[{}]/a""".format(i+1)))).click()
 
             # We wait to perform another task so that we have ample time to download the files
             time.sleep(self.waiting)
 
-if __name__ == '__main__':
-    if getpass.getuser()=="nadialucas":
-        file_folder = r"/Users/nadialucas/Documents/EPIC/2018/orientation_sessions/txt"
-        chromedriver_path = r"/Users/nadialucas/anaconda/bin/chromedriver"   
-    elif  
-    files = ["demographics.txt","house_age.txt","house_chars1.txt","house_chars2.txt","house_type.txt"]
-    data_url = "http://www.jasmiths.com/data_project"
-    driverObj = ChromeDriver(file_folder, chromedriver_path, files, data_url)
-    driverObj.get_data()
+# if __name__ == '__main__':
+#     if getpass.getuser()=="nadialucas":
+#         file_folder = r"/Users/nadialucas/Documents/EPIC/2018/orientation_sessions/txt"
+#         chromedriver_path = r"/Users/nadialucas/anaconda/bin/chromedriver"   
+#     elif  
+#     files = ["demographics.txt","house_age.txt","house_chars1.txt","house_chars2.txt","house_type.txt"]
+#     data_url = "http://www.jasmiths.com/data_project"
+#     driverObj = ChromeDriver(file_folder, chromedriver_path, files, data_url)
+#     driverObj.get_data()
 
 
