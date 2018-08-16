@@ -68,7 +68,7 @@ conda install chromedriver
 
 ##### Text editor
 
-Python comes with IDLE which is a text editor but is not the best in my opinion. Many RAs prefer [Sublime](https://www.sublimetext.com/) as a text editor for most languages.
+Python comes with IDLE which is a text editor but is not the best in my opinion. Many RAs prefer [Sublime](https://www.sublimetext.com/) as a text editor for most languages. 
 
 ### R
 
@@ -76,7 +76,7 @@ Python comes with IDLE which is a text editor but is not the best in my opinion.
 
 Here is the [link](https://cran.rstudio.com/) to download R
 
-##### Setup RStudio
+##### Set Up RStudio
 
 Many R users have a personal preference for [RStudio](https://www.rstudio.com/products/rstudio/download/). You can download using the link or navigate to anaconda by running ```anaconda-navigator``` on your command-line and installing straight from there.
 
