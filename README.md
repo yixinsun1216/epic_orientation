@@ -8,7 +8,7 @@ Repo for all orientation training materials
 
 ##### Download and Install Software
 
-We will be using the command-line interface to [Git](https://www.git-scm.com/). Download is available at the link for those who do not already have the software installed. Once installed, Windows users should look for Git Bash, Mac and Linux will now have git embedded in a terminal.
+We will be using the command-line interface to [Git](https://www.git-scm.com/). Download is available at the link for those who do not already have the software installed. Once installed, Windows users should look for Git Bash, Mac and Linux will now have git embedded in Terminal. Navigate to either Git Bash or Terminal to run all command-line prompts.
 
 If you are unfamiliar with the command-line, I found these notes helpful:
 
@@ -27,7 +27,7 @@ There are many ways to make git a little more user friendly. I'll go through and
 git config --global user.name "Your Name"
 git config --global user.email "username@gmail.com"
 ```
-I also enjoy using colors when I interact with git because it makes the command line experience much less painful so I would also recommend running the following commands on the command-line
+I also like using colors when I interact with git because it makes the command-line experience much less painful so I would also recommend running the following commands on the command-line
 ```
 git config --global color.branch auto
 git config --global color.diff auto
@@ -50,7 +50,7 @@ Because Python is an open-source software, you will find yourself needing to use
 
 ##### Use Anaconda to install Python
 
-Using Anaconda you can install Python 2.7 on your local machine. I prefer 2.7 because it makes dealing with legacy code a little easier but many people use find using the most up to date version of Python (no version number would be needed in the install command) works for them. Navigate to the command line and type:
+Using Anaconda you can install Python 2.7 on your local machine. I prefer 2.7 because it makes dealing with legacy code a little easier but many people use find using the most up to date version of Python (no version number would be needed in the install command) works for them. Navigate to the command-line and type:
 
 ```
 conda install python=2.7
@@ -99,8 +99,49 @@ If you have a Mac, a preferred LaTeX software is [TeXShop](https://pages.uoregon
 
 If you're on a Windows machine, a preferred LaTeX software is [TexMaker](http://www.xm1math.net/texmaker/) which also runs on Mac.
 
+### Stata
 
+You all already have Stata on your machines (if you don't please talk to one of us ASAP). For the data project you will need to install a few user-written packages, some by our very own Andrew Smith!
 
+Unfortunately, Stata does not integrate well with the command-line so navigate to your Stata command prompt and copy/paste the following in there in one block.
 
+```
+* Install ftools (remove program if it existed previously)
+cap ado uninstall ftools
+net install ftools, from("https://raw.githubusercontent.com/sergiocorreia/ftools/master/src/")
+
+* Install reghdfe 4.x
+cap ado uninstall reghdfe
+net install reghdfe, from("https://raw.githubusercontent.com/sergiocorreia/reghdfe/master/src/")
+
+* Install boottest for Stata 11 and 12
+if (c(version)<13) cap ado uninstall boottest
+if (c(version)<13) ssc install boottest
+
+* Install moremata (sometimes used by ftools but not needed for reghdfe)
+cap ssc install moremata
+
+* Install ivreg2, the core package
+ssc install ivreg2
+
+* Finally, install this package
+cap ado uninstall ivreg2hdfe
+cap ado uninstall ivreghdfe
+net install ivreghdfe, from(https://raw.githubusercontent.com/sergiocorreia/ivreghdfe/master/src/)
+
+* Install estout/esttab
+ssc install estout, replace
+
+* For the balance table
+cap ado uninstall "bcheck"
+net install bcheck, from("https://raw.githubusercontent.com/jandrewsmith03/bcheck/master/")
+
+* For simplerd
+cap ado uninstall "simplerd"
+net install simplerd, from("https://raw.githubusercontent.com/jandrewsmith03/simplerd/master/")
+
+* For some extension to egen
+ssc install egenmore
+```
 
 
