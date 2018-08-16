@@ -84,6 +84,6 @@ Many R users have a personal preference for [RStudio](https://www.rstudio.com/pr
 
 Navigate to your command-line and type:
 ```
-Rscript -e 'install.packages(c("tidyverse", "lfe", "sf"), repos = "https://cran.rstudio.com/")'
+Rscript -e 'install.packages(c("tidyverse", "lfe", "sf", "ggplot2"), repos = "https://cran.rstudio.com/")'
 ```
 
