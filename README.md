@@ -78,5 +78,12 @@ Here is the [link](https://cran.rstudio.com/) to download R
 
 ##### Setup RStudio
 
-Many R users have a personal preference for [RStudio](https://www.rstudio.com/products/rstudio/download/). You can download here or navigate to anaconda by typing ```anaconda-navigator``` on your command-line and installing straight from there
+Many R users have a personal preference for [RStudio](https://www.rstudio.com/products/rstudio/download/). You can download using the link or navigate to anaconda by typing ```anaconda-navigator``` on your command-line and installing straight from there.
+
+##### Install packages for R
+
+Navigate to your command-line and type:
+```
+Rscript -e 'install.packages(c("tidyverse", "lfe", "sf"), repos = "https://cran.rstudio.com/")'
+```
 
