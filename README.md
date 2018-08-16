@@ -22,7 +22,7 @@ For the purposes of the git session and the data project, we will be hosting all
 
 ##### Configure Git
 
-There are many ways to make git a little more user friendly. I'll go through and detail how I configured my own git setup. Because every git commit needs to include both a name and e-mail, you can configure this on your local machine to automatically attach it to every commit you make. Don't worry if you don't quite understand what I'm saying, just type these into either Git Bash or Terminal, replacing in quotes with your personal information. Use the email address you used to set up your github account. 
+There are many ways to make git a little more user friendly. I'll go through and detail how I configured my own git setup. Because every git commit needs to include both a name and e-mail, you can configure this on your local machine to automatically attach it to every commit you make. Don't worry if you don't quite understand what I'm saying, just run these commands in either Git Bash or Terminal, replacing in quotes with your personal information. Use the email address you used to set up your github account. 
 ``` 
 git config --global user.name "Your Name"
 git config --global user.email "username@gmail.com"
@@ -50,7 +50,7 @@ Because Python is an open-source software, you will find yourself needing to use
 
 ##### Use Anaconda to install Python
 
-Using Anaconda you can install Python 2.7 on your local machine. I prefer 2.7 because it makes dealing with legacy code a little easier but many people use find using the most up to date version of Python (no version number would be needed in the install command) works for them. Navigate to the command-line and type:
+Using Anaconda you can install Python 2.7 on your local machine. I prefer 2.7 because it makes dealing with legacy code a little easier but many people find using the most up to date version of Python (no version number would be needed in the install command) works for them. Navigate to the command-line and run:
 
 ```
 conda install python=2.7
@@ -78,11 +78,11 @@ Here is the [link](https://cran.rstudio.com/) to download R
 
 ##### Setup RStudio
 
-Many R users have a personal preference for [RStudio](https://www.rstudio.com/products/rstudio/download/). You can download using the link or navigate to anaconda by typing ```anaconda-navigator``` on your command-line and installing straight from there.
+Many R users have a personal preference for [RStudio](https://www.rstudio.com/products/rstudio/download/). You can download using the link or navigate to anaconda by running ```anaconda-navigator``` on your command-line and installing straight from there.
 
 ##### Install packages for R
 
-Navigate to your command-line and type:
+Navigate to your command-line and run:
 ```
 Rscript -e 'install.packages(c("tidyverse", "lfe", "sf", "ggplot2"), repos = "https://cran.rstudio.com/")'
 ```
