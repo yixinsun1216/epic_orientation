@@ -57,7 +57,7 @@ def set_up(path, files, chromedriverpath):
     # Returning data
     return driver, waiting, engine
 
-def main():
+def scrape_data_project():
     path = "/Users/nadialucas/Dropbox/epic_task/rawdata/txt"
     files = ["demographics.txt","house_age1.txt","house_age2.txt","house_chars1.txt","house_chars2.txt","sample82.txt"]
     chromedriverpath = "/Users/nadialucas/anaconda/bin/chromedriver"
@@ -70,4 +70,4 @@ def main():
     driver.quit()
 
 if __name__ == '__main__':
-    main()
+    scrape_data_project()

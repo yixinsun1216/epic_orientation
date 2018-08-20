@@ -22,10 +22,10 @@ os.chdir(path)
 # Removing files from directory (if necessary)
 files = ["demographics.txt","house_age1.txt","house_age2.txt","house_chars1.txt","house_chars2.txt","sample82.txt"]
 for f in files:
-    filepath = os.path.join(path, f)
-
-    if os.path.exists(filepath):
-        os.remove(filepath)
+	print(f)
+	filepath = os.path.join(path, f)
+	if os.path.exists(filepath):
+		os.remove(filepath)
 
 # Setting wait time, search engine in use
 waiting = 10
