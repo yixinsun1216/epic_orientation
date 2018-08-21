@@ -14,7 +14,6 @@ library(readr)
 library(ggplot2)
 library(mapview)
 library(lubridate)
-Sys.setenv(RSTUDIO_PANDOC="C:/Program Files/RStudio/bin/pandoc")
 
 # set directory from which we read in data
 ddir <- "C:/Users/Yixin Sun/Documents/Dropbox/EPIC Predoc Resources/epic_orientation/data/Spatial_crime"
