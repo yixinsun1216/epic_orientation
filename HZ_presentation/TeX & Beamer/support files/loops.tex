@@ -1,0 +1,43 @@
+\documentclass[reqno,11pt,titlepage]{article}
+\usepackage[left=1in, right=1in, top=1in, bottom=1in]{geometry}
+\usepackage{caption} % for the figure, not necessary for loops
+\usepackage{float} % for the figure, not necessary for loops, helps ensure that figures show up where they should, using [H], etc.
+\usepackage{graphicx} % to input figures
+\usepackage{pgffor} % SEE THIS: allows for looping
+
+\newcommand{\HS}{\hspace{\fontdimen2\font}} % To break a reference variable, so that word spacing occurs normally
+
+%%%%% DOCUMENT BEGINS HERE %%%%%
+\begin{document}
+
+% Use loops to read in all the files
+\foreach \ot in {mayor, ps}	 {%% First loop over mayor vs. party secretary, i.e. official type
+    \foreach \src in {mf, gh}  {% % Then over the co-author of the source
+        \foreach \cutoff in {small, large}	{% % Then over the cutoff of the histogram
+            \foreach \ct in {crpt, noncrpt} {% % Then whether the official was investigated for corruption or not
+                % Defines a string to correspond with our "corrupt" indicator
+                \ifnum\pdfstrcmp{\ct}{crpt}=0 % String comparison, i.e. "if equal". \ifnum needs a boolean as input.
+                    \newcommand{\ctstr}{corrupt}
+                \else
+                    \newcommand{\ctstr}{non-corrupt}
+                \fi % Don't forget this!
+                % FIGURE is here
+                \begin{figure}[H]
+                \caption{\textbf{Distribution of \cutoff\HS land sales area for \ctstr\HS officials, (\MakeUppercase{\src})}}
+                \centering
+                \includegraphics[width=0.65\linewidth]{china_figures/histograms/area_\cutoff_\ct_\ot_\src}
+                \label{area_\cutoff_\ct_\ot_\src}
+                \begin{tabular*}{1.0\textwidth}{c} 
+                \multicolumn{1}{p{1.0\hsize}}{\footnotesize \textit{Note: Out of the 970k transactions matched to at one prefecture official, 718k have area under 2k acres (`small''), 247k have area between 2k and 100k acres (``large''), and 4k have area greater than 100k acres.
+                } 
+                }
+                \end{tabular*}
+                \end{figure}
+            }%
+        }%
+     }%
+}%
+ 
+     
+\end{document}
+
